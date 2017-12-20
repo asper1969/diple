@@ -11,22 +11,29 @@
 <body>
     <div class="promos">
         <div class="container">
-            <div class="emails">emails</div>
-            <div class="phones">phones</div>
+            <div class="emails">
+                <a href="mailto:info@diple.kz">info@diple.kz</a>
+            </div>
+            <div class="phones">
+                <p>+7 (702) 589 98 79</p>
+                <p>+7 (7212) 50-28-20</p>
+            </div>
+            <div class="close-btn">+</div>
         </div>
     </div>
     <header>
         <div class="container">
             <div class="logo">logo</div>
-            <div class="slogan">slogan</div>
+            <div class="slogan">
+                <p>Профессиональная настройка</p>
+                <p>контекстной рекламы</p>
+            </div>
         </div>
-        <div class="main-menu">
-            <?php
-            wp_nav_menu(array('menu' => 2));
-            ?>
-        </div>
+        <?php
+        wp_nav_menu(array('menu' => 2));
+        ?>
         <div class="btns">
-            <div class="btn">.</div>
-            <div class="btn">.</div>
+            <a href="#" class="btn btn-info">.</a>
+            <a href="#" class="btn btn-call">.</a>
         </div>
     </header>
