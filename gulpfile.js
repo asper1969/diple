@@ -35,7 +35,7 @@ gulp.task('watch-sass', function(){
 });
 
 gulp.task('webpack', function(){
-    gulp.src('src/js')
+    gulp.src('src/js/**/*.js')
         .pipe(plumber(function(error){
             var args = Array.prototype.slice.call(arguments);
             notify.onError({

@@ -170,33 +170,149 @@ header{
 
 .packages{
   width: 1200px;
-  margin: 0 auto;
+  margin: 38px auto 0;
   padding: 0 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  .wrapper{
+    height: 468px;
+  }
 
   .package{
-    display: flex;
-    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
 
     &.active{
+      z-index: 10;
 
-      .img{
-
-        img{
-          transform: scale(1) translate(0, 0);
-        }
+      .container{
+        opacity: 1;
+        visibility: visible;
       }
     }
 
     .container{
       max-width: 580px;
       color: $c-text;
+      opacity: 0;
+      visibility: hidden;
+
+      @include transite(all);
 
       .title{
         font-size: 24px;
-        font-weight: 700;
+        font-weight: 300;
+        margin-bottom: 40px;
 
         strong{
           text-transform: uppercase;
+          font-weight: 700;
+        }
+      }
+
+      .pager-wrapper{
+        position: relative;
+
+        ul.slick-dots{
+          text-align: left;
+          position: static;
+          display: flex;
+
+          li{
+            display: block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            height: auto;
+            width: auto;
+            margin-right: 50px;
+
+            &:before{
+              content: '';
+              display: block;
+              width: 73px;
+              height: 73px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform-origin: 50% 50%;
+              transform: translate(-50%, -50%) rotate(0deg);
+              background: url('../images/icons/active-pager.png');
+              opacity: 0;
+
+              @include transite(all);
+            }
+
+            &:after{
+              content: '';
+              display: block;
+              width: 28px;
+              height: 1px;
+              position: absolute;
+              right: -40px;
+              top: 50%;
+              transform: translateY(-50%);
+              border-bottom: 1px solid $c-border;
+
+              @include transite(all);
+            }
+
+            &:hover{
+
+              span{
+                color: $c-accent;
+              }
+            }
+
+            &.slick-active{
+
+              &:before{
+                transform: translate(-50%, -50%) rotate(720deg);
+                opacity: 1;
+              }
+
+              span{
+                color: $c-accent;
+              }
+            }
+
+            &:last-of-type{
+              margin-right: 0;
+
+              &:after{
+                display: none;
+              }
+            }
+          }
+
+          span{
+            font-weight: 700;
+            font-size: 24px;
+            color: $c-menu-link-hover;
+            display: block;
+            width: 72px;
+            height: 72px;
+            line-height: 72px;
+            text-align: center;
+            position: relative;
+
+            &:after{
+              content: '';
+              display: block;
+              position: absolute;
+              width: 51px;
+              height: 51px;
+              border: 1px solid $c-border;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%) rotate(45deg);
+            }
+          }
         }
       }
 
@@ -207,28 +323,75 @@ header{
           .sub-title{
             font-size: 22px;
             font-weight: 700;
+            margin-top: 30px;
           }
 
           .text{
-
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 36px;
           }
 
           .btn-more{
+            display: inline-block;
+            padding: 0 24px;
+            line-height: 43px;
+            border-radius: 4px;
+            border: 1px solid $c-border;
+            color: $c-text;
 
+            @include transite(all);
+
+            &:hover{
+              background: $c-accent;
+              border-color: $c-accent;
+              color: #fff;
+            }
           }
         }
       }
     }
 
+  }
+
+  .triggers{
+    position: relative;
+    z-index: 10;
+
     .img{
       width: 535px;
       height: 468px;
-      position: relative;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+
+      &.active{
+        z-index: 1;
+
+        img{
+          transform: scale(1) translate(0, 0);
+        }
+      }
+
+      &:not(.active){
+
+        &:hover{
+
+          img{
+
+            &:hover{
+              transform: scale(0.5) translate(612px, -10px);
+            }
+          }
+        }
+      }
 
       img{
         display: block;
         position: absolute;
         transform: scale(0.5) translate(612px, 0);
+        cursor: pointer;
 
         @include transite(all);
         transition-duration: .5s;
