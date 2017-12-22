@@ -22144,10 +22144,13 @@ module.exports = g;
 var changePackage = {
 
     settings: {
-        triggers: $('.packages .img img'),
+        triggers: $('.packages .img img, .details .triggers .img img'),
+        nextBtn: $('.details .wrapper .package .info .btns .swipe-btn'),
         packages: {
             slider: $('.packages .package'),
-            packageImage: $('.packages .triggers .img')
+            packageImage: $('.packages .triggers .img img'),
+            packageDetail: $('.details .wrapper .package'),
+            packages: $('.packages .package, .details .wrapper .package')
         }
     },
 
@@ -22162,11 +22165,27 @@ var changePackage = {
 
             return false;
         });
+
+        this.settings.nextBtn.click(function () {
+            handler.swipe();
+
+            return false;
+        });
     },
 
     swipe: function swipe() {
 
-        this.settings.packages.slider.each(function (i, el) {
+        this.settings.triggers.each(function (i, el) {
+            var $package = $(this).parent();
+
+            if ($package.hasClass('active')) {
+                $package.removeClass('active');
+            } else {
+                $package.addClass('active');
+            }
+        });
+
+        this.settings.packages.packages.each(function (i, el) {
             var $package = $(this);
 
             if ($package.hasClass('active')) {
