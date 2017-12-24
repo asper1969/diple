@@ -441,26 +441,32 @@ header{
 
   .wrapper{
     position: relative;
-    min-height: 485px;
+
+    &.marketing{
+      min-height: 485px;
+
+      .package{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(20px);
+        z-index: 1;
+
+        @include transite(all);
+
+        &.active{
+          opacity: 1;
+          transform: translateY(0);
+          z-index: 10;
+        }
+      }
+    }
 
     .package{
       display: flex;
       justify-content: space-between;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0;
-      transform: translateY(20px);
-      z-index: 1;
-
-      @include transite(all);
-
-      &.active{
-        opacity: 1;
-        transform: translateY(0);
-        z-index: 10;
-      }
 
       .package-img{
         position: relative;
@@ -619,6 +625,157 @@ header{
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+  }
+}
+
+.presentations{
+  //TODO: implement color with js instead of coloring nested classes
+  position: relative;
+
+  .triggers{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+
+    .swipe-btn{
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .wrapper{
+
+    .title{
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .package{
+
+      &.yandex{
+        background: $c-yandex;
+
+        .presentation{
+          width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+          min-height: 600px;
+
+          .slide{
+            min-height: 600px;
+          }
+
+          &.search{
+
+            .slide{
+
+              @for $i from 1 through 4{
+
+                &:nth-of-type(#{$i}){
+                  background: url('../images/presentations/yandex-search/#{$i}.png') no-repeat center bottom;
+                }
+              }
+            }
+          }
+
+          &.banner{
+
+            .slide{
+
+              @for $i from 1 through 4{
+
+                &:nth-of-type(#{$i}){
+                  background: url('../images/presentations/yandex-banners/#{$i}.png') no-repeat center bottom;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.google{
+        background: $c-google;
+
+        .presentation{
+          width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+          min-height: 600px;
+
+          .slide{
+            min-height: 600px;
+          }
+
+          &.search{
+
+            .slide{
+
+              @for $i from 1 through 4{
+
+                &:nth-of-type(#{$i}){
+                  background: url('../images/presentations/google-search/#{$i}.png') no-repeat center bottom;
+                }
+              }
+            }
+          }
+
+          &.banner{
+
+            .slide{
+
+              @for $i from 1 through 4{
+
+                &:nth-of-type(#{$i}){
+                  background: url('../images/presentations/google-banners/#{$i}.png') no-repeat center bottom;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.development{
+        background: url('../images/benefits-marketing.jpg') no-repeat center center;
+        background-size: cover;
+
+        .presentation{
+          width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+          min-height: 600px;
+
+          .slide{
+            min-height: 600px;
+
+            @for $i from 1 through 4{
+
+              &:nth-of-type(#{$i}){
+                background: url('../images/presentations/development/#{$i}.png') no-repeat center bottom;
+              }
+            }
+          }
+        }
+      }
+
+      &.about{
+        background: $c-about;
+
+        .presentation{
+          width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+          min-height: 600px;
+
+          .slide{
+            min-height: 600px;
+          }
+        }
+      }
     }
   }
 }
