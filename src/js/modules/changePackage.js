@@ -2,11 +2,13 @@ let changePackage = {
 
     settings: {
         triggers: $('.packages .img img, .details .triggers .img img'),
-        nextBtn: $('.details .wrapper .package .info .btns .swipe-btn'),
+        nextBtn: $('.details .wrapper .package .info .btns .swipe-btn, ' +
+                    '.calculators .package .swipe-btn img'),
         packages: {
             slider: $('.packages .package'),
             packageImage: $('.packages .triggers .img img'),
             packageDetail: $('.details .wrapper .package'),
+            packageCalc: $('.calculators .package'),
             packages: $('.packages .package, .details .wrapper .package')
         }
     },
@@ -24,6 +26,7 @@ let changePackage = {
         });
 
         this.settings.nextBtn.click(function(){
+            console.log('test');
             handler.swipe();
 
             return false;
@@ -53,6 +56,16 @@ let changePackage = {
         });
 
         this.settings.packages.packageImage.each(function(i, el){
+            let $package = $(this);
+
+            if($package.hasClass('active')){
+                $package.removeClass('active');
+            }else{
+                $package.addClass('active');
+            }
+        });
+
+        this.settings.packages.packageCalc.each(function(i, el){
             let $package = $(this);
 
             if($package.hasClass('active')){

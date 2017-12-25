@@ -139,85 +139,96 @@
     </div>
 </div>
 <div class="calculators">
-    <div class="title">
+    <h4 class="title">
         <p>
             Рассчитайте стоимость
         </p>
         <p>
             продвижения по минимальной цене
         </p>
-    </div>
+    </h4>
     <div class="swipe-btn">Закрыть</div>
     <div class="wrapper">
-        <div class="package yandex">
+        <div class="package yandex active">
             <div class="img">
                 <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/yandex-glitch.jpg" alt="">
             </div>
             <div class="form-wrapper">
                 <form class="calc">
-                    <fieldset>
+                    <div class="fieldset">
                         <div class="field-title">У вас</div>
-                        <div class="type">
-                            <input type="radio" id="type-product-yandex" name="type" value="product" checked>
-                            <label for="type-product">Продукт</label>
-                            <input type="radio" id="type-service-yandex" name="type" value="service">
-                            <label for="type-service">Услуга</label>
+                        <div class="type fields">
+                            <div class="field">
+                                <input type="radio" id="type-product-yandex" name="type" value="product" checked>
+                                <label for="type-product">Продукт</label>
+                            </div>
+                            <div class="field">
+                                <input type="radio" id="type-service-yandex" name="type" value="service">
+                                <label for="type-service">Услуга</label>
+                            </div>
                         </div>
-                    </fieldset>
-                    <fieldset>
+                    </div>
+                    <div class="fieldset">
                         <div class="field-title">Дополнительное описание</div>
-                        <div class="text">
+                        <div class="text fields">
                             <input type="text" id="calc-text-yandex" name="text">
                         </div>
-                    </fieldset>
-                    <fieldset>
+                    </div>
+                    <div class="fieldset">
                         <div class="field-title">
                             <p>Дополнительная продукция</p>
                             <p>к основному товару или услуге</p>
                         </div>
-                        <div class="extras">
+                        <div class="extras fields">
                             <select name="extras">
                                 <option value="value1">Value 1</option>
                                 <option value="value2" selected>Value 2</option>
                                 <option value="value3">Value 3</option>
                             </select>
                         </div>
-                    </fieldset>
-                    <fieldset>
+                    </div>
+                    <div class="fieldset">
                         <div class="field-title">
                             <p>Регион для</p>
                             <p>продвижения</p>
                         </div>
-                        <div class="region">
-                            <input type="radio" id="all-yandex" name="area" value="all" checked>
-                            <label for="type-product">Весь Казахстан</label>
-                            <input type="radio" id="selected-yandex" name="area" value="selected">
-                            <label for="type-service">Один или<br> несколько регионов</label>
+                        <div class="region fields">
+                            <div class="field">
+                                <input type="radio" id="all-yandex" name="area" value="all" checked>
+                                <label for="type-product">Весь Казахстан</label>
+                            </div>
+                            <div class="field">
+                                <input type="radio" id="selected-yandex" name="area" value="selected">
+                                <label for="type-service">Один или<br> несколько регионов</label>
+                            </div>
                         </div>
-                    </fieldset>
-                    <fieldset>
+                    </div>
+                    <div class="fieldset">
                         <div class="field-title">Ежемесячный бюджет</div>
-                        <div class="budget">
+                        <div class="budget fields">
                             <select name="budget">
                                 <option value="value1">Value 1</option>
                                 <option value="value2" selected>Value 2</option>
                                 <option value="value3">Value 3</option>
                             </select>
                         </div>
-                    </fieldset>
-                    <fieldset>
+                    </div>
+                    <div class="fieldset">
                         <div class="field-title">E-mail</div>
-                        <div class="email">
+                        <div class="email fields">
                             <input type="email" id="email-yandex" name="email">
                         </div>
-                    </fieldset>
-                    <fieldset>
+                    </div>
+                    <div class="fieldset">
                         <div class="field-title">Контактный телефон</div>
-                        <div class="phone">
+                        <div class="phone fields">
                             <input type="text" id="phone-yandex" name="phone">
                         </div>
-                    </fieldset>
-                    <button type="submit">Расчитать</button>
+                    </div>
+                    <div class="fieldset">
+                        <div class="field-title"></div>
+                        <button type="submit">Расчитать</button>
+                    </div>
                 </form>
                 <div class="btns">
                     <div class="swipe-btn">
@@ -232,69 +243,80 @@
             </div>
             <div class="form-wrapper">
                 <form class="calc">
-                    <fieldset>
+                    <div class="fieldset">
                         <div class="field-title">У вас</div>
-                        <div class="type">
-                            <input type="radio" id="type-product-yandex" name="type" value="product" checked>
-                            <label for="type-product">Продукт</label>
-                            <input type="radio" id="type-service-yandex" name="type" value="service">
-                            <label for="type-service">Услуга</label>
+                        <div class="type fields">
+                            <div class="field">
+                                <input type="radio" id="type-product-google" name="type" value="product" checked>
+                                <label for="type-product">Продукт</label>
+                            </div>
+                            <div class="field">
+                                <input type="radio" id="type-service-google" name="type" value="service">
+                                <label for="type-service">Услуга</label>
+                            </div>
                         </div>
-                    </fieldset>
-                    <fieldset>
+                    </div>
+                    <div class="fieldset">
                         <div class="field-title">Дополнительное описание</div>
-                        <div class="text">
-                            <input type="text" id="calc-text-yandex" name="text">
+                        <div class="text fields">
+                            <input type="text" id="calc-text-google" name="text">
                         </div>
-                    </fieldset>
-                    <fieldset>
+                    </div>
+                    <div class="fieldset">
                         <div class="field-title">
                             <p>Дополнительная продукция</p>
                             <p>к основному товару или услуге</p>
                         </div>
-                        <div class="extras">
+                        <div class="extras fields">
                             <select name="extras">
                                 <option value="value1">Value 1</option>
                                 <option value="value2" selected>Value 2</option>
                                 <option value="value3">Value 3</option>
                             </select>
                         </div>
-                    </fieldset>
-                    <fieldset>
+                    </div>
+                    <div class="fieldset">
                         <div class="field-title">
                             <p>Регион для</p>
                             <p>продвижения</p>
                         </div>
-                        <div class="region">
-                            <input type="radio" id="all-yandex" name="area" value="all" checked>
-                            <label for="type-product">Весь Казахстан</label>
-                            <input type="radio" id="selected-yandex" name="area" value="selected">
-                            <label for="type-service">Один или<br> несколько регионов</label>
+                        <div class="region fields">
+                            <div class="field">
+                                <input type="radio" id="all-google" name="area" value="all" checked>
+                                <label for="type-product">Весь Казахстан</label>
+                            </div>
+                            <div class="field">
+                                <input type="radio" id="selected-google" name="area" value="selected">
+                                <label for="type-service">Один или<br> несколько регионов</label>
+                            </div>
                         </div>
-                    </fieldset>
-                    <fieldset>
+                    </div>
+                    <div class="fieldset">
                         <div class="field-title">Ежемесячный бюджет</div>
-                        <div class="budget">
+                        <div class="budget fields">
                             <select name="budget">
                                 <option value="value1">Value 1</option>
                                 <option value="value2" selected>Value 2</option>
                                 <option value="value3">Value 3</option>
                             </select>
                         </div>
-                    </fieldset>
-                    <fieldset>
+                    </div>
+                    <div class="fieldset">
                         <div class="field-title">E-mail</div>
-                        <div class="email">
-                            <input type="email" id="email-yandex" name="email">
+                        <div class="email fields">
+                            <input type="email" id="email-google" name="email">
                         </div>
-                    </fieldset>
-                    <fieldset>
+                    </div>
+                    <div class="fieldset">
                         <div class="field-title">Контактный телефон</div>
-                        <div class="phone">
-                            <input type="text" id="phone-yandex" name="phone">
+                        <div class="phone fields">
+                            <input type="text" id="phone-google" name="phone">
                         </div>
-                    </fieldset>
-                    <button type="submit">Расчитать</button>
+                    </div>
+                    <div class="fieldset">
+                        <div class="field-title"></div>
+                        <button type="submit">Расчитать</button>
+                    </div>
                 </form>
                 <div class="btns">
                     <div class="swipe-btn">
@@ -606,7 +628,6 @@
 </div>
 <div class="benefits marketing">
     <div class="container">
-        <div class="swipe-btn">Закрыть</div>
         <ul class="points">
             <li class="point">
                 <strong>1</strong>Прописываем показатели в договоре, <br>
