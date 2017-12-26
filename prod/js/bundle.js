@@ -11115,6 +11115,11 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('.clients .content >ul').slick({
+        slidesToShow: 4,
+        variableWidth: true
+    });
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 

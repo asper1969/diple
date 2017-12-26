@@ -20,4 +20,9 @@ $(document).ready(()=>{
             }
         });
     });
+
+    $('.clients .content >ul').slick({
+        slidesToShow: 4,
+        variableWidth: true
+    });
 });

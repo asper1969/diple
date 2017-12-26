@@ -615,16 +615,18 @@
             специальный пакет по продвижению <span>?</span></h4>
         <div class="text">Lorem ipsum... какой-то текст по наведению на знак вопроса</div>
     </div>
-    <form class="special">
+    <form class="form-special">
         <input type="text" placeholder="Ваше имя*">
         <input type="text" placeholder="Ваш телефон*">
         <button type="submit">Получить пакет</button>
     </form>
 </div>
 <div class="about-us">
-    <h2 class="title">Diple</h2>
-    <div class="text">Крупнейшая компания в Казахстане <br>
-        по настройке и продвижению контекстной рекламы</div>
+    <div class="container">
+        <h2 class="title"><span>Diple</span></h2>
+        <div class="text">Крупнейшая компания в Казахстане <br>
+            по настройке и продвижению контекстной рекламы</div>
+    </div>
 </div>
 <div class="benefits marketing">
     <div class="container">

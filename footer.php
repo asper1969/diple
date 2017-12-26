@@ -1,7 +1,9 @@
 <footer>
     <div class="clients">
-        <div class="title">Наши клиенты</div>
-        <div class="content">slider with clients</div>
+        <?php
+        $post = get_post(27);?>
+        <h4 class="title"><?php echo $post->post_title;?></h4>
+        <div class="content"><?php echo $post->post_content;?></div>
     </div>
     <div class="container">
         <div class="col col-1">

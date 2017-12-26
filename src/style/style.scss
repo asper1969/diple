@@ -978,6 +978,113 @@ header{
   }
 }
 
+.special{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  form{
+    width: 644px;
+
+    input{
+      width: 200px;
+      border-bottom: 1px solid $c-border;
+    }
+
+    button{
+      display: inline-block;
+      background: transparent;
+      border-radius: 4px;
+      height: 43px;
+      padding: 0 50px;
+      line-height: 43px;
+      color: #000;
+      margin-right: 20px;
+      font-size: 14px;
+      background: $c-accent;
+
+      @include transite(all);
+
+      &:hover{
+        color: #fff;
+        background: darken($c-accent, 10%);
+      }
+    }
+  }
+}
+
+.about-us{
+
+  .container{
+    width: 1200px;
+    margin: 0 auto;
+    min-height: 375px;
+    padding: 0 20px;
+    background: url('../images/diple-bg.jpg') no-repeat center center;
+
+    .title{
+      text-align: center;
+      text-indent: -99999px;
+      width: 256px;
+      height: 56px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform-origin: 50% 50%;
+        top: -10px;
+        transform: rotate(-22deg) translateX(-50%);
+        width: 190px;
+        height: 190px;
+        border: 1px solid $c-border;
+        z-index: 5;
+      }
+
+      &:after{
+        content: '';
+        display: block;
+        width: 240px;
+        height: 167px;
+        position: absolute;
+        background: url('../images/icons/diamond.png') no-repeat center center;
+        top: -150px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 7;
+      }
+
+      span{
+        position: relative;
+        background: url('../images/icons/diple-black.png') no-repeat center center;
+        display: block;
+        height: 100%;
+        z-index: 10;
+      }
+    }
+
+    .text{
+      text-transform: uppercase;
+      font-size: 30px;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+}
+
 .benefits{
   height: 600px;
   background: url('../images/benefits-marketing.jpg') no-repeat center center;
@@ -1044,6 +1151,20 @@ header{
     flex-wrap: wrap;
     height: 100%;
     padding-top: 80px;
+    position: relative;
+    z-index: 10;
+
+    &:after{
+      content: '';
+      display: block;
+      width: 35px;
+      height: 31px;
+      position: absolute;
+      right: -21px;
+      top: calc(50% + 6px);
+      transform: translateY(-50%);
+      background: url('../images/icons/diamond-icon.png') no-repeat center center;
+    }
 
     li{
       color: #fff;
@@ -1052,6 +1173,98 @@ header{
       font-size: 18px;
       position: relative;
       padding-left: 42px;
+
+      @for $i from 1 through 6{
+
+        &:nth-of-type(#{$i}){
+
+          @if $i < 4{
+
+            &:before{
+              content: '';
+              display: block;
+              width: 1px;
+              height: 196px;
+              border-right: 1px solid $c-accent;
+              position: absolute;
+              left: 13px;
+              top: 56px;
+            }
+
+            &:after{
+              content: '';
+              display: block;
+              width: 58px;
+              height: 59px;
+              position: absolute;
+              bottom: -14px;
+              left: 50%;
+              transform: translateX(-50%);
+              background: url('../images/icons/benefits/marketing/#{$i}.png') no-repeat center center;
+            }
+
+            strong{
+
+              &:after{
+                display: block;
+                content: '';
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                background: $c-accent;
+                bottom: -176px;
+                left: 50%;
+                transform: rotate(45deg) translateX(-50%);
+              }
+            }
+          }
+
+          @if $i > 3{
+            margin-top: 50px;
+
+            &:before{
+              content: '';
+              display: block;
+              width: 58px;
+              height: 59px;
+              margin-top: 26px;
+              margin-bottom: 22px;
+              position: relative;
+              left: calc(50% - 20px);
+              transform: translateX(-50%);
+              background: url('../images/icons/benefits/marketing/#{$i}.png') no-repeat center center;
+            }
+
+            strong{
+              top: 32px;
+            }
+          }
+
+          @if $i == 1{
+
+            strong{
+
+              &:before{
+                content: '';
+                display: block;
+                width: 30px;
+                height: 30px;
+                border: 1px solid $c-accent;
+                transform-origin: 50% 50%;
+                left: calc(50% - 3px);
+                transform: rotate(45deg) translateX(-50%);
+                bottom: -195px;
+                background: transparent;
+                position: absolute;
+              }
+            }
+          }
+
+          &:after{
+            background: url('../images/icons/benefits/marketing/#{$i}.png') no-repeat center center;
+          }
+        }
+      }
 
       strong{
         position: absolute;
@@ -1065,13 +1278,13 @@ header{
         font-size: 16px;
         font-style: italic;
         display: block;
-        margin-top: 20px;
+        margin-top: 12px;
         margin-bottom: 10px;
 
         span{
           text-decoration: underline;
-          margin-top: 10px;
-          margin-bottom: 10px;
+          margin-top: 0;
+          margin-bottom: 7px;
           display: block;
         }
       }
@@ -1083,6 +1296,63 @@ footer{
   width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+
+  .clients{
+    border-bottom: 1px solid $c-border;
+    height: 135px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    h4.title{
+      text-transform: uppercase;
+      width: 208px;
+      padding-right: 80px;
+      font-size: 22px;
+      font-weight: 700;
+      border-right: 1px solid $c-border;
+      position: relative;
+      color: $c-text;
+      display: flex;
+      align-items: center;
+
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 34px;
+        background: url("../images/icons/close-alter.png");
+        width: 17px;
+        height: 27px;
+        transform: translateY(-50%);
+      }
+    }
+
+    .content{
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+
+      ul{
+        width: 946px;
+
+        li{
+          width: 150px;
+          margin: 0 30px;
+          text-align: center;
+          opacity: .7;
+
+          @include transite(all);
+
+          &:hover{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
 
   >.container{
     color: $c-text-footer;
@@ -1103,15 +1373,15 @@ footer{
       }
     }
 
-    .col-3{
-
-      a{
-        display: block;
-      }
-
-      a:first-of-type{
-        margin-bottom: 20px;
-      }
-    }
+    //.col-3{
+    //
+    //  a{
+    //    display: block;
+    //  }
+    //
+    //  a:first-of-type{
+    //    margin-bottom: 20px;
+    //  }
+    //}
   }
 }
