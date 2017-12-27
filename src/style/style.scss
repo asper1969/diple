@@ -605,7 +605,7 @@ header{
 
 .calculators{
   width: 1200px;
-  margin: 0 auto;
+  margin: 40px auto 0;
   padding: 0 20px;
   position: relative;
   color: $c-menu-link-hover;
@@ -614,6 +614,7 @@ header{
     color: $c-menu-link-hover;
     font-size: 30px;
     font-weight: 700;
+    margin-bottom: 12px;
   }
 
   >.swipe-btn{
@@ -718,23 +719,28 @@ header{
             transform: translateY(-50%);
           }
 
-          &:after{
-            content: '';
-            position: absolute;
-            display: block;
-            width: 7px;
-            height: 7px;
-            background: $c-accent;
-            transform: translate(-50%,-50%);
-            top: 50%;
-            left: 0;
-            border: 1px solid $c-border;
+          &.checked{
+
+            &:after{
+              content: '';
+              position: absolute;
+              display: block;
+              width: 7px;
+              height: 7px;
+              background: $c-accent;
+              transform: translate(-50%,-50%);
+              top: 50%;
+              left: 11px;
+              border: 1px solid $c-border;
+            }
           }
 
           input[type='radio']{
             position: relative;
             z-index: 10;
             display: block;
+            opacity: 0;
+            cursor: pointer;
           }
         }
       }
@@ -980,7 +986,7 @@ header{
 
 .special{
   width: 1200px;
-  margin: 0 auto;
+  margin: 60px auto 0;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
@@ -990,13 +996,54 @@ header{
     text-transform: uppercase;
     font-weight: 700;
     font-size: 20px;
+    position: relative;
+
+    span{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      font-weight: 300;
+      font-size: 16px;
+      text-align: center;
+      line-height: 18px;
+      color: $c-accent;
+      border: 1px solid $c-border;
+      border-radius: 3px;
+      right: 0;
+      bottom: 3px;
+      cursor: pointer;
+    }
+  }
+
+  .container{
+    position: relative;
+  }
+
+  .text{
+    border: 1px solid $c-border;
+    border-radius: 3px;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    visibility: hidden;
+    opacity: 0;
+    background: #fff;
+
+    @include transite(all);
+
+    &.active{
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   form{
-    width: 644px;
+    width: 630px;
 
     input{
-      width: 200px;
+      width: 202px;
+      height: 30px;
       border-bottom: 1px solid $c-border;
     }
 
@@ -1005,10 +1052,10 @@ header{
       background: transparent;
       border-radius: 4px;
       height: 43px;
-      padding: 0 50px;
+      padding: 0 36px;
       line-height: 43px;
-      color: #000;
-      margin-right: 20px;
+      color: #fff;
+      margin-left: 40px;
       font-size: 14px;
       background: $c-accent;
 
@@ -1023,12 +1070,13 @@ header{
 }
 
 .about-us{
+  padding-bottom: 50px;
 
   .container{
     width: 1200px;
     margin: 0 auto;
     min-height: 375px;
-    padding: 0 20px;
+    padding: 310px 20px 0;
     background: url('../images/diple-bg.jpg') no-repeat center center;
 
     .title{
@@ -1044,9 +1092,9 @@ header{
         content: '';
         display: block;
         position: absolute;
-        left: 50%;
+        left: calc(50% - 7px);
         transform-origin: 50% 50%;
-        top: -10px;
+        top: -250px;
         transform: rotate(-22deg) translateX(-50%);
         width: 190px;
         height: 190px;
@@ -1061,7 +1109,7 @@ header{
         height: 167px;
         position: absolute;
         background: url('../images/icons/diamond.png') no-repeat center center;
-        top: -150px;
+        top: -180px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 7;
@@ -1121,7 +1169,6 @@ header{
   .container{
     width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 
     &:before, &:after{
       content: '';
@@ -1132,7 +1179,7 @@ header{
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-      background: url('../images/icons/diple.png') no-repeat center center;
+      background: url('../images/icons/diple.png') no-repeat top center;
       opacity: .05;
     }
 
@@ -1295,7 +1342,7 @@ header{
 footer{
   width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px 50px;
 
   .clients{
     border-bottom: 1px solid $c-border;

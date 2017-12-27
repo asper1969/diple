@@ -11116,9 +11116,24 @@ $(document).ready(function () {
         });
     });
 
+    $('.special .container .title span').hover(function () {
+        $(this).closest('.container').find('.text').addClass('active');
+    }, function () {
+        $(this).closest('.container').find('.text').removeClass('active');
+    });
+
     $('.clients .content >ul').slick({
         slidesToShow: 4,
         variableWidth: true
+    });
+
+    $('.calculators .package .fieldset .fields .field input[type="radio"]:checked').parent().addClass('checked');
+    $('.calculators .package .fieldset .fields .field input[type="radio"]').click(function () {
+        if (!$(this).parent().hasClass('checked')) {
+            console.log($(this).closest('.fields').find('input[type="radio"]:checked').parent().attr('class'));
+            $(this).closest('.fields').find('.field.checked').removeClass('checked');
+            $(this).parent().addClass('checked');
+        }
     });
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
