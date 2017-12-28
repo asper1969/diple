@@ -838,41 +838,251 @@ header{
   position: relative;
 
   .triggers{
+    position: absolute;
     width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    position: relative;
+    top: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
 
-    .swipe-btn{
+    >.swipe-btn{
       position: absolute;
-      right: 20px;
       top: 50%;
+      right: 20px;
+      color: $c-menu-link-hover;
+      padding-right: 38px;
+      font-size: 14px;
+      cursor: pointer;
+      z-index: 10;
       transform: translateY(-50%);
+
+      &:hover{
+        //color: $c-accent;
+      }
+
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 28px;
+        height: 27px;
+        background: url('../images/icons/close-alter.png');
+      }
+    }
+
+    .title{
+      font-size: 48px;
+      font-weight: 300;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .triggers-packages{
+      display: flex;
+      margin-bottom: 15px;
+
+      .img{
+        background: transparent;
+        padding: 8px 0;
+        text-align: center;
+        width: 150px;
+        border: 1px solid #fff;
+        line-height: 10px;
+
+        @include transite(all);
+
+        img{
+          filter: grayscale(100%) contrast(0%) brightness(70%);
+          opacity: .5;
+          cursor: pointer;
+
+          @include transite(all);
+        }
+
+        &:hover{
+          background: rgba(#fff, .5);
+
+          img{
+            filter: grayscale(50%) contrast(50%) brightness(70%);
+            opacity: .7;
+          }
+        }
+
+        &.active{
+          background: #fff;
+
+          img{
+            filter: grayscale(0%);
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .triggers-directions{
+      display: flex;
+
+      .direction{
+        color: #fff;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.4;
+        margin-right: 42px;
+        position: relative;
+        border-bottom: 1px solid #fff;
+        line-height: 30px;
+
+        &.active{
+          font-weight: 700;
+          border-bottom: 2px solid #fff;
+        }
+      }
     }
   }
 
   .wrapper{
-
-    .title{
-      width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    position: relative;
 
     .package{
+      display: none;
+
+      &.active{
+        display: block;
+      }
+
+      .presentation{
+        width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        min-height: 600px;
+
+        .slide{
+          min-height: 600px;
+        }
+
+        &.search{
+
+          .slide{
+
+            &:first-of-type{
+              background-position: 116px bottom!important;
+
+              ul.points{
+                position: relative;
+                color: #fff;
+                font-weight: 600;
+                font-size: 24px;
+                font-style: italic;
+
+                li.point{
+                  position: absolute;
+                  display: flex;
+                  align-items: center;
+
+                  strong{
+                    display: block;
+                    color: #fff;
+                    width: 54px;
+                    height: 54px;
+                    background: $c-accent;
+                    border-radius: 100%;
+                    text-align: center;
+                    line-height: 54px;
+                    margin-right: 20px;
+                    font-style: normal;
+                  }
+
+                  &:first-of-type{
+                    top: 270px;
+                    left: 112px;
+                  }
+
+                  &:nth-of-type(2){
+                    left: 504px;
+                    top: 66px;
+                  }
+
+                  &:nth-of-type(3){
+                    left: auto;
+                    top: 172px;
+                    right: -20px;
+                  }
+                }
+              }
+            }
+
+            &:nth-of-type(2){
+              position: relative;
+
+              ul.points{
+                position: absolute;
+                bottom: 40px;
+                right: -10px;
+                color: #fff;
+                font-weight: 600;
+                font-size: 18px;
+                font-style: italic;
+                width: 1040px;
+                height: 314px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                li.point{
+                  width: 34%;
+                  position: relative;
+
+                  &:before{
+                    content: '';
+                    display: block;
+                    width: 9px;
+                    height: 9px;
+                    background: $c-accent;
+                    border-radius: 100%;
+                    position: absolute;
+                    left: -26px;
+                    top: 7px;
+                  }
+
+                  &.hidden{
+                    opacity: 0;
+                  }
+                }
+              }
+            }
+
+            h4.subtitle{
+              font-size: 24px;
+              font-weight: 700;
+              padding-left: 10px;
+              border-right: 1px solid #000;
+            }
+          }
+        }
+
+        &.banner{
+
+          .slide{
+
+            @for $i from 1 through 4{
+
+              &:nth-of-type(#{$i}){
+                background: url('../images/presentations/yandex-banners/#{$i}.png') no-repeat center center;
+              }
+            }
+          }
+        }
+      }
 
       &.yandex{
         background: $c-yandex;
 
         .presentation{
-          width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-          min-height: 600px;
-
-          .slide{
-            min-height: 600px;
-          }
 
           &.search{
 
@@ -978,6 +1188,14 @@ header{
           .slide{
             min-height: 600px;
           }
+        }
+      }
+
+      .presentation{
+        display: none;
+
+        &.active{
+          display: block;
         }
       }
     }
@@ -1419,16 +1637,5 @@ footer{
         text-transform: none;
       }
     }
-
-    //.col-3{
-    //
-    //  a{
-    //    display: block;
-    //  }
-    //
-    //  a:first-of-type{
-    //    margin-bottom: 20px;
-    //  }
-    //}
   }
 }

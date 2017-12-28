@@ -328,25 +328,30 @@
     </div>
 </div>
 <div class="presentations">
-    <h2 class="title">Как это работает</h2>
-    <div class="triggers">
-        <div class="img package active">
-            <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/yandex.png" alt="">
+    <div class="container">
+        <div class="triggers">
+            <h2 class="title">Как это работает</h2>
+            <div class="triggers-packages">
+                <div class="img package active">
+                    <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/yandex.png" alt="">
+                </div>
+                <div class="img package">
+                    <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/google.png" alt="">
+                </div>
+            </div>
+            <div class="triggers-directions">
+                <p class="direction active">
+                    Поисковая реклама
+                </p>
+                <p class="direction">
+                    Банерная реклама
+                </p>
+            </div>
+            <div class="swipe-btn">Закрыть</div>
         </div>
-        <div class="img package">
-            <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/google.png" alt="">
-        </div>
-        <div class="swipe-btn">Закрыть</div>
     </div>
+
     <div class="wrapper">
-        <div class="directions">
-            <p class="direction active">
-                Поисковая реклама
-            </p>
-            <p class="direction">
-                Банерная реклама
-            </p>
-        </div>
         <div class="package yandex active">
             <div class="presentation search active">
                 <div class="slide slide-1" data-index="1">
@@ -362,17 +367,18 @@
                 <div class="slide slide-2" data-index="2">
                     <h4 class="subtitle">Сематическое ядро поисковых запросов</h4>
                     <ul class="points">
-                        <li class="point">Собираем ядро<br>
-                            (до 20 000 поисковых фраз)</li>
-                        <li class="point">Используем “поисковой <br>
-                            шпионаж”- сбор поисковых <br>
-                            запросов конкурентов</li>
+                        <li class="point hidden"></li>
                         <li class="point">Корректируем ключевые <br>
                             запросы, для обхода статуса <br>
                             “мало показов”</li>
+                        <li class="point">Собираем ядро<br>
+                            (до 20 000 поисковых фраз)</li>
                         <li class="point">Тщательно минусуем <br>
                             и фильтруем <br>
                             поисковые запросы</li>
+                        <li class="point">Используем “поисковой <br>
+                            шпионаж”- сбор поисковых <br>
+                            запросов конкурентов</li>
                         <li class="point">Разбиваем ключевые <br>
                             фразы на различные темы</li>
                     </ul>
