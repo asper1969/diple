@@ -63,76 +63,78 @@
     </div>
     <div class="triggers">
         <div class="img active">
-            <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/yandex-pack.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/yandex-pack.png" alt="">
         </div>
         <div class="img">
-            <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/google-pack.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/google-pack.png" alt="">
         </div>
     </div>
 </div>
 <div class="details">
-    <div class="triggers">
-        <div class="img package active">
-            <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/yandex.png" alt="">
-        </div>
-        <div class="img package">
-            <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/google.png" alt="">
-        </div>
-    </div>
-    <div class="wrapper marketing">
-        <div class="package yandex active">
-            <div class="package-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/yandex.jpg" alt="">
+    <div class="container">
+        <div class="triggers">
+            <div class="img package active">
+                <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/yandex.png" alt="">
             </div>
-            <div class="info">
-                <div class="title">
-                    <p>Настройка контекстной рекламы</p>
-                    <p>Яндекс Директ доверьте свой рекламный</p>
-                    <p>бюджет профессионалам!</p>
-                </div>
-                <div class="text">
-                    <ul>
-                        <li>Реклама в поиске Яндекс, GoMail, Rambler</li>
-                        <li>Таргетированная баннерная реклама в соц <br>сетях и популярных сайтах<br>
-                            (mail.ru, kolesa.kz, nur.kz)</li>
-                        <li>
-                            Бесплатный показ рекламы<br>
-                            с оплатой за клик от 5 тг
-                        </li>
-                    </ul>
-                </div>
-                <div class="btns">
-                    <a href="#" class="btn btn-calc">Калькулятор расчета</a>
-                    <a href="#" class="btn btn-how">Как это работает</a>
-                    <div class="swipe-btn">+</div>
-                </div>
+            <div class="img package">
+                <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/google.png" alt="">
             </div>
         </div>
-        <div class="package google">
-            <div class="package-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/google.jpg" alt="">
+        <div class="wrapper marketing">
+            <div class="package yandex active">
+                <div class="package-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/yandex.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <p>Настройка контекстной рекламы</p>
+                        <p>Яндекс Директ доверьте свой рекламный</p>
+                        <p>бюджет профессионалам!</p>
+                    </div>
+                    <div class="text">
+                        <ul>
+                            <li>Реклама в поиске Яндекс, GoMail, Rambler</li>
+                            <li>Таргетированная баннерная реклама в соц <br>сетях и популярных сайтах<br>
+                                (mail.ru, kolesa.kz, nur.kz)</li>
+                            <li>
+                                Бесплатный показ рекламы<br>
+                                с оплатой за клик от 5 тг
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btns">
+                        <a href="#" class="btn btn-calc">Калькулятор расчета</a>
+                        <a href="#" class="btn btn-how">Как это работает</a>
+                        <div class="swipe-btn">+</div>
+                    </div>
+                </div>
             </div>
-            <div class="info">
-                <div class="title">
-                    <p>Настройка контекстной рекламы</p>
-                    <p>Яндекс Директ доверьте свой рекламный</p>
-                    <p>бюджет профессионалам!</p>
+            <div class="package google">
+                <div class="package-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/google.jpg" alt="">
                 </div>
-                <div class="text">
-                    <ul>
-                        <li>Реклама в поиске Яндекс, GoMail, Rambler</li>
-                        <li>Таргетированная баннерная реклама в соц <br>сетях и популярных сайтах<br>
-                            (mail.ru, kolesa.kz, nur.kz)</li>
-                        <li>
-                            Бесплатный показ рекламы<br>
-                            с оплатой за клик от 5 тг
-                        </li>
-                    </ul>
-                </div>
-                <div class="btns">
-                    <a href="#" class="btn btn-calc">Калькулятор расчета</a>
-                    <a href="#" class="btn btn-how">Как это работает</a>
-                    <div class="swipe-btn">+</div>
+                <div class="info">
+                    <div class="title">
+                        <p>Настройка контекстной рекламы</p>
+                        <p>Яндекс Директ доверьте свой рекламный</p>
+                        <p>бюджет профессионалам!</p>
+                    </div>
+                    <div class="text">
+                        <ul>
+                            <li>Реклама в поиске Яндекс, GoMail, Rambler</li>
+                            <li>Таргетированная баннерная реклама в соц <br>сетях и популярных сайтах<br>
+                                (mail.ru, kolesa.kz, nur.kz)</li>
+                            <li>
+                                Бесплатный показ рекламы<br>
+                                с оплатой за клик от 5 тг
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btns">
+                        <a href="#" class="btn btn-calc">Калькулятор расчета</a>
+                        <a href="#" class="btn btn-how">Как это работает</a>
+                        <div class="swipe-btn">+</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -328,25 +330,30 @@
     </div>
 </div>
 <div class="presentations">
-    <h2 class="title">Как это работает</h2>
-    <div class="triggers">
-        <div class="img package active">
-            <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/yandex.png" alt="">
+    <div class="container">
+        <div class="triggers">
+            <h2 class="title">Как это работает</h2>
+            <div class="triggers-packages">
+                <div class="img package active">
+                    <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/yandex.png" alt="">
+                </div>
+                <div class="img package">
+                    <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/google.png" alt="">
+                </div>
+            </div>
+            <div class="triggers-directions">
+                <p class="direction active">
+                    Поисковая реклама
+                </p>
+                <p class="direction">
+                    Банерная реклама
+                </p>
+            </div>
+            <div class="swipe-btn">Закрыть</div>
         </div>
-        <div class="img package">
-            <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/google.png" alt="">
-        </div>
-        <div class="swipe-btn">Закрыть</div>
     </div>
+
     <div class="wrapper">
-        <div class="directions">
-            <p class="direction active">
-                Поисковая реклама
-            </p>
-            <p class="direction">
-                Банерная реклама
-            </p>
-        </div>
         <div class="package yandex active">
             <div class="presentation search active">
                 <div class="slide slide-1" data-index="1">
@@ -362,17 +369,18 @@
                 <div class="slide slide-2" data-index="2">
                     <h4 class="subtitle">Сематическое ядро поисковых запросов</h4>
                     <ul class="points">
-                        <li class="point">Собираем ядро<br>
-                            (до 20 000 поисковых фраз)</li>
-                        <li class="point">Используем “поисковой <br>
-                            шпионаж”- сбор поисковых <br>
-                            запросов конкурентов</li>
+                        <li class="point hidden"></li>
                         <li class="point">Корректируем ключевые <br>
                             запросы, для обхода статуса <br>
                             “мало показов”</li>
+                        <li class="point">Собираем ядро<br>
+                            (до 20 000 поисковых фраз)</li>
                         <li class="point">Тщательно минусуем <br>
                             и фильтруем <br>
                             поисковые запросы</li>
+                        <li class="point">Используем “поисковой <br>
+                            шпионаж”- сбор поисковых <br>
+                            запросов конкурентов</li>
                         <li class="point">Разбиваем ключевые <br>
                             фразы на различные темы</li>
                     </ul>
@@ -405,19 +413,19 @@
                             поиска и ЦА, составляем <br>
                             объявления под каждый <br>
                             запрос</li>
-                        <li class="point">Разрабатываем стратегию <br>
-                            показа, операясь <br>
-                            на медиаплан</li>
-                        <li class="point">Настраиваем таргетинг <br>
-                            под целевую аудиторию</li>
                         <li class="point">Помечаем объявления УТМ <br>
                             и подключаем метрику, для <br>
                             последующего подробного <br>
                             анализа</li>
+                        <li class="point">Разрабатываем стратегию <br>
+                            показа, операясь <br>
+                            на медиаплан</li>
                         <li class="point">Автоматизируем участие <br>
                             в аукционе на поиске и РСЯ <br>
                             для фиксации верхних позиций <br>
                             по минимальной стоимости</li>
+                        <li class="point">Настраиваем таргетинг <br>
+                            под целевую аудиторию</li>
                         <li class="point">Предоставляем бесплатную <br>
                             аналитику контекстной рекламы <br>
                             предлагая эффективные <br>
@@ -425,7 +433,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="presentation banner">
+            <div class="presentation banner active">
                 <div class="slide slide-1" data-index="1">
                     <h4 class="subtitle">Тысячи популярных сайтов партнеров <br>
                         Яндекс Директ</h4>
@@ -610,16 +618,18 @@
     </div>
 </div>
 <div class="special">
-    <div class="container">
-        <h4 class="title">Заполните форму и получите бесплатно <br>
-            специальный пакет по продвижению <span>?</span></h4>
-        <div class="text">Lorem ipsum... какой-то текст по наведению на знак вопроса</div>
+    <div class="wrapper">
+        <div class="container">
+            <h4 class="title">Заполните форму и получите бесплатно <br>
+                специальный пакет по продвижению <span>?</span></h4>
+            <div class="text">Lorem ipsum... какой-то текст по наведению на знак вопроса</div>
+        </div>
+        <form class="form-special">
+            <input type="text" placeholder="Ваше имя*">
+            <input type="text" placeholder="Ваш телефон*">
+            <button type="submit">Получить пакет</button>
+        </form>
     </div>
-    <form class="form-special">
-        <input type="text" placeholder="Ваше имя*">
-        <input type="text" placeholder="Ваш телефон*">
-        <button type="submit">Получить пакет</button>
-    </form>
 </div>
 <div class="about-us">
     <div class="container">
