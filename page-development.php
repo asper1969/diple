@@ -42,10 +42,10 @@
     <div class="container">
         <div class="wrapper">
             <div class="package active">
-                <div class="package-img">
+                <div class="package-img development">
                     <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/web-dev.jpg" alt="">
                 </div>
-                <div class="info">
+                <div class="info development">
                     <div class="title">
                         <p>Мы делаем прибыльнее бизнес наших клиентов,</p>
                         <p>где сайт - не конечная цель, а инструмент, для</p>
@@ -204,6 +204,7 @@
                         <li class="point"><strong>4</strong> Одна - две строки, информации <br>
                             вторая строка как оно там будет</li>
                     </ul>
+                    <div class="pointer">.</div>
                 </div>
                 <div class="slide slide-2" data-index="2">
                     <ul class="points">
@@ -218,6 +219,7 @@
                         <li class="point"><strong>5</strong> Вы получаете полноценный, <br>
                             уникальный PSD макет сайта </li>
                     </ul>
+                    <div class="pointer">.</div>
                 </div>
                 <div class="slide slide-3" data-index="3">
                     <ul class="points">
@@ -235,6 +237,7 @@
                         <li class="icon">Интеграция сайта с CRM системой, <br>
                             для обработки входящих заявок</li>
                     </ul>
+                    <div class="pointer">.</div>
                 </div>
             </div>
         </div>
