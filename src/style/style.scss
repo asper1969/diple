@@ -621,7 +621,7 @@ header{
 
 .calculators{
   width: 1200px;
-  margin: 40px auto 0;
+  margin: 40px auto;
   padding: 0 20px;
   position: relative;
   color: $c-menu-link-hover;
@@ -792,6 +792,7 @@ header{
       padding: 0 50px;
       line-height: 43px;
       color: #000;
+      margin-top: 32px;
       margin-right: 20px;
       font-size: 14px;
 
@@ -806,8 +807,8 @@ header{
 
     .swipe-btn{
       position: absolute;
-      bottom: 0;
-      right: 20px;
+      bottom: 15px;
+      right: 0;
       color: $c-menu-link-hover;
       padding-right: 38px;
       font-size: 14px;
@@ -865,9 +866,9 @@ header{
 
     >.swipe-btn{
       position: absolute;
-      top: 50%;
+      top: 30px;
       right: 20px;
-      color: $c-menu-link-hover;
+      color: #fff;
       padding-right: 38px;
       font-size: 14px;
       cursor: pointer;
@@ -1052,7 +1053,7 @@ header{
 
               &:nth-of-type(2){
                 position: relative;
-                background-position: center!important;
+                background-position: 410px center !important;
 
                 ul.points{
                   position: absolute;
@@ -1065,7 +1066,7 @@ header{
                   display: flex;
                   justify-content: space-between;
                   flex-wrap: wrap;
-                  right: -64px;
+                  left: 170px;
                   width: 1110px;
 
                   li.point{
@@ -1092,6 +1093,7 @@ header{
               }
 
               &:nth-of-type(3){
+                background-position: 255px bottom;
 
                 ul.points{
                   position: relative;
@@ -1099,7 +1101,8 @@ header{
                   font-size: 18px;
                   font-style: italic;
                   font-weight: 500;
-                  margin-top: 194px;
+                  top: 194px;
+                  left: 120px;
 
                   li.point{
                     margin-bottom: 32px;
@@ -1127,6 +1130,7 @@ header{
 
               &:nth-of-type(4){
                 position: relative;
+                background-position: 400px bottom;
 
                 ul.points{
                   position: absolute;
@@ -1139,7 +1143,7 @@ header{
                   display: flex;
                   justify-content: space-between;
                   flex-wrap: wrap;
-                  right: -64px;
+                  left: 170px;
                   width: 1110px;
 
                   li.point{
@@ -1321,7 +1325,10 @@ header{
                   flex-wrap: wrap;
                   justify-content: center;
                   position: absolute;
-                  bottom: 36px;
+                  bottom: 64px;
+                  width: 1080px;
+                  margin-left: auto;
+                  right: 0;
 
                   &:before{
                     content: '';
@@ -1335,22 +1342,23 @@ header{
                     transform: translateY(-50%);
                   }
 
+                  &:after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 30px;
+                    top: -47px;
+                    width: 1px;
+                    border-right: 1px solid #fff;
+                    height: 31px;
+                  }
+
                   li.icon{
                     display: block;
                     margin-right: 50px;
                     position: relative;
                     padding-left: 86px;
                     margin-bottom: 57px;
-
-                    &:last-of-type,
-                    &:nth-of-type(4){
-                      margin-bottom: 0;
-                    }
-
-                    &:nth-of-type(3),
-                    &:last-of-type{
-                      margin-right: 0;
-                    }
 
                     &:before{
                       content: '';
@@ -1361,6 +1369,91 @@ header{
                       left: 0;
                       top: 50%;
                       transform: translateY(-50%);
+                    }
+                    &:last-of-type,
+                    &:nth-of-type(4){
+                      margin-bottom: 0;
+                    }
+
+                    &:nth-of-type(3),
+                    &:last-of-type{
+                      margin-right: 0;
+                    }
+
+                    &:first-of-type{
+                      width: 270px;
+                      padding-left: 60px;
+
+                      span{
+
+                        &:before{
+                          left: -49px;
+                        }
+
+                        &:after{
+                          left: -46px;
+                        }
+                      }
+                    }
+                    &:nth-of-type(2){
+                      width: 380px;
+                      padding-left: 52px;
+
+                      span{
+
+                        &:before{
+                          left: -40px;
+                        }
+
+                        &:after{
+                          left: -37px;
+                        }
+                      }
+                    }
+                    &:nth-of-type(3){
+                      padding-left: 60px;
+                      width: 300px;
+
+                      span{
+
+                        &:before{
+                          left: -45px;
+                        }
+
+                        &:after{
+                          left: -42px;
+                        }
+                      }
+                    }
+                    &:nth-of-type(4){
+                      padding-left: 50px;
+                      width: 324px;
+
+                      span{
+
+                        &:before{
+                          left: -41px;
+                        }
+
+                        &:after{
+                          left: -38px;
+                        }
+                      }
+                    }
+                    &:nth-of-type(5){
+                      padding-left: 86px;
+                      width: 290px;
+
+                      span{
+
+                        &:before{
+                          left: -57px;
+                        }
+
+                        &:after{
+                          left: -54px;
+                        }
+                      }
                     }
 
                     @for $i from 1 through 5{
@@ -1378,7 +1471,6 @@ header{
                             height: 9px;
                             background: #fff;
                             position: absolute;
-                            left: -58px;
                             transform: rotate(45deg);
 
                             @if $i < 4{
@@ -1395,7 +1487,6 @@ header{
                             width: 1px;
                             border-right: 1px solid #fff;
                             position: absolute;
-                            left: -55px;
 
                             @if $i < 4{
                               bottom: -30px;
@@ -1406,7 +1497,7 @@ header{
                         }
 
                         &:before{
-                          background: url('../images/icons/banners/#{$i}.png') no-repeat center center;
+                          background: url('../images/icons/banners/#{$i}.png') no-repeat left center;
                         }
                       }
                     }
@@ -1421,7 +1512,7 @@ header{
 
               &:nth-of-type(3){
                 position: relative;
-                background-position-x: 252px;
+                background-position-x: 382px;
 
                 ul.points{
                   position: absolute;
@@ -1432,6 +1523,7 @@ header{
                   font-style: italic;
                   padding: 30px 0;
                   border-right: 1px solid #fff;
+                  left: 130px;
 
                   &:after{
                     content: '';
@@ -1538,24 +1630,51 @@ header{
               }
 
               &:first-of-type{
+                background-position-x: 120px;
 
                 ul.points{
+                  position: relative;
+                  color: #fff;
+                  font-weight: 500;
+                  font-size: 24px;
+                  font-style: italic;
 
                   li.point{
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
 
-                    &:nth-of-type(1){
-                      top: 241px;
+                    strong{
+                      display: block;
+                      color: #fff;
+                      width: 54px;
+                      height: 54px;
+                      background: $c-accent;
+                      border-radius: 100%;
+                      text-align: center;
+                      line-height: 54px;
+                      margin-right: 20px;
+                      font-style: normal;
+                    }
+
+                    &:first-of-type{
+                      top: 266px;
                       left: 94px;
                     }
 
                     &:nth-of-type(2){
-                      left: 472px;
-                      top: 66px;
+                      left: 476px;
+                      top: 74px;
                     }
 
                     &:nth-of-type(3){
+                      left: auto;
                       top: 222px;
-                      right: 5px;
+                      right: 1px;
+
+                      strong{
+                        margin-top: -30px;
+                      }
                     }
                   }
                 }
@@ -1563,7 +1682,7 @@ header{
 
               &:nth-of-type(2){
                 position: relative;
-                background-position: center!important;
+                background-position: 410px center !important;
 
                 ul.points{
                   position: absolute;
@@ -1576,7 +1695,7 @@ header{
                   display: flex;
                   justify-content: space-between;
                   flex-wrap: wrap;
-                  right: -64px;
+                  left: 170px;
                   width: 1110px;
 
                   li.point{
@@ -1603,6 +1722,7 @@ header{
               }
 
               &:nth-of-type(3){
+                background-position: 255px bottom;
 
                 ul.points{
                   position: relative;
@@ -1610,7 +1730,8 @@ header{
                   font-size: 18px;
                   font-style: italic;
                   font-weight: 500;
-                  margin-top: 194px;
+                  top: 194px;
+                  left: 120px;
 
                   li.point{
                     margin-bottom: 32px;
@@ -1638,6 +1759,7 @@ header{
 
               &:nth-of-type(4){
                 position: relative;
+                background-position: 400px bottom;
 
                 ul.points{
                   position: absolute;
@@ -1650,7 +1772,7 @@ header{
                   display: flex;
                   justify-content: space-between;
                   flex-wrap: wrap;
-                  right: -64px;
+                  left: 170px;
                   width: 1110px;
 
                   li.point{
@@ -1832,7 +1954,10 @@ header{
                   flex-wrap: wrap;
                   justify-content: center;
                   position: absolute;
-                  bottom: 36px;
+                  bottom: 64px;
+                  width: 1080px;
+                  margin-left: auto;
+                  right: 0;
 
                   &:before{
                     content: '';
@@ -1846,22 +1971,23 @@ header{
                     transform: translateY(-50%);
                   }
 
+                  &:after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 30px;
+                    top: -47px;
+                    width: 1px;
+                    border-right: 1px solid #fff;
+                    height: 31px;
+                  }
+
                   li.icon{
                     display: block;
                     margin-right: 50px;
                     position: relative;
                     padding-left: 86px;
                     margin-bottom: 57px;
-
-                    &:last-of-type,
-                    &:nth-of-type(4){
-                      margin-bottom: 0;
-                    }
-
-                    &:nth-of-type(3),
-                    &:last-of-type{
-                      margin-right: 0;
-                    }
 
                     &:before{
                       content: '';
@@ -1872,6 +1998,91 @@ header{
                       left: 0;
                       top: 50%;
                       transform: translateY(-50%);
+                    }
+                    &:last-of-type,
+                    &:nth-of-type(4){
+                      margin-bottom: 0;
+                    }
+
+                    &:nth-of-type(3),
+                    &:last-of-type{
+                      margin-right: 0;
+                    }
+
+                    &:first-of-type{
+                      width: 270px;
+                      padding-left: 60px;
+
+                      span{
+
+                        &:before{
+                          left: -49px;
+                        }
+
+                        &:after{
+                          left: -46px;
+                        }
+                      }
+                    }
+                    &:nth-of-type(2){
+                      width: 380px;
+                      padding-left: 52px;
+
+                      span{
+
+                        &:before{
+                          left: -40px;
+                        }
+
+                        &:after{
+                          left: -37px;
+                        }
+                      }
+                    }
+                    &:nth-of-type(3){
+                      padding-left: 60px;
+                      width: 300px;
+
+                      span{
+
+                        &:before{
+                          left: -45px;
+                        }
+
+                        &:after{
+                          left: -42px;
+                        }
+                      }
+                    }
+                    &:nth-of-type(4){
+                      padding-left: 50px;
+                      width: 324px;
+
+                      span{
+
+                        &:before{
+                          left: -41px;
+                        }
+
+                        &:after{
+                          left: -38px;
+                        }
+                      }
+                    }
+                    &:nth-of-type(5){
+                      padding-left: 86px;
+                      width: 290px;
+
+                      span{
+
+                        &:before{
+                          left: -57px;
+                        }
+
+                        &:after{
+                          left: -54px;
+                        }
+                      }
                     }
 
                     @for $i from 1 through 5{
@@ -1889,7 +2100,6 @@ header{
                             height: 9px;
                             background: #fff;
                             position: absolute;
-                            left: -58px;
                             transform: rotate(45deg);
 
                             @if $i < 4{
@@ -1906,7 +2116,6 @@ header{
                             width: 1px;
                             border-right: 1px solid #fff;
                             position: absolute;
-                            left: -55px;
 
                             @if $i < 4{
                               bottom: -30px;
@@ -1917,7 +2126,7 @@ header{
                         }
 
                         &:before{
-                          background: url('../images/icons/banners/#{$i}.png') no-repeat center center;
+                          background: url('../images/icons/banners/#{$i}.png') no-repeat left center;
                         }
                       }
                     }
@@ -1932,7 +2141,7 @@ header{
 
               &:nth-of-type(3){
                 position: relative;
-                background-position-x: 252px;
+                background-position-x: 382px;
 
                 ul.points{
                   position: absolute;
@@ -1943,6 +2152,7 @@ header{
                   font-style: italic;
                   padding: 30px 0;
                   border-right: 1px solid #fff;
+                  left: 130px;
 
                   &:after{
                     content: '';
@@ -2230,7 +2440,6 @@ header{
 
 .benefits{
   height: 600px;
-  background: url('../images/benefits-marketing.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
   display: flex;
@@ -2246,7 +2455,11 @@ header{
     top: 50%;
     transform: translateY(-50%);
     background: url('../images/icons/d.png') no-repeat center center;
-    background-size: cover;
+    background-size: contain;
+
+    @include r(1700){
+      display: none;
+    }
   }
 
   &:after{
@@ -2254,15 +2467,270 @@ header{
     height: 1px;
     content: '';
     display: block;
-    border-bottom: 1px solid $c-accent;
     left: 50%;
     top: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
   }
 
+  &.marketing{
+    background: url('../images/benefits-marketing.jpg') no-repeat center center;
+
+    &:after{
+      border-bottom: 1px solid $c-accent;
+    }
+
+    ul.points{
+
+      &:after{
+        background: url('../images/icons/diamond-icon-marketing.png') no-repeat center center;
+      }
+
+      li{
+        @for $i from 1 through 6{
+
+          &:nth-of-type(#{$i}){
+
+            @if $i < 4{
+
+              &:before{
+                content: '';
+                display: block;
+                width: 1px;
+                height: 196px;
+                border-right: 1px solid $c-accent;
+                position: absolute;
+                left: 14px;
+                top: 56px;
+              }
+
+              &:after{
+                content: '';
+                display: block;
+                width: 58px;
+                height: 59px;
+                position: absolute;
+                bottom: -14px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+
+              strong{
+
+                &:after{
+                  display: block;
+                  content: '';
+                  width: 10px;
+                  height: 10px;
+                  position: absolute;
+                  background: $c-accent;
+                  bottom: -176px;
+                  left: 50%;
+                  transform: rotate(45deg) translateX(-50%);
+                }
+              }
+            }
+
+            @if $i > 3{
+              margin-top: 50px;
+
+              &:before{
+                content: '';
+                display: block;
+                width: 58px;
+                height: 59px;
+                margin-top: 26px;
+                margin-bottom: 22px;
+                position: relative;
+                left: calc(50% - 20px);
+                transform: translateX(-50%);
+              }
+
+              strong{
+                top: 32px;
+              }
+            }
+
+            @if $i == 1{
+
+              strong{
+
+                &:before{
+                  content: '';
+                  display: block;
+                  width: 30px;
+                  height: 30px;
+                  border: 1px solid $c-accent;
+                  transform-origin: 50% 50%;
+                  left: calc(50% - 3px);
+                  transform: rotate(45deg) translateX(-50%);
+                  bottom: -195px;
+                  background: transparent;
+                  position: absolute;
+                }
+              }
+            }
+          }
+        }
+
+        @for $i from 1 through 6{
+
+          &:nth-of-type(#{$i}){
+
+            @if $i < 4{
+
+              &:after{
+                background: url('../images/icons/benefits/marketing/#{$i}.png') no-repeat center center;
+              }
+            }
+
+            @if $i > 3{
+
+              &:before{
+                background: url('../images/icons/benefits/marketing/#{$i}.png') no-repeat center center;
+              }
+            }
+
+            &:after{
+              background: url('../images/icons/benefits/marketing/#{$i}.png') no-repeat center center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.development{
+    background: url('../images/benefits-development.jpg') no-repeat center center;
+
+    &:after{
+      border-bottom: 1px solid $c-accent-development;
+    }
+
+    ul.points{
+
+      &:after{
+        background: url('../images/icons/diamond-icon-development.png') no-repeat center center;
+      }
+
+      li{
+
+        @for $i from 1 through 6{
+
+          &:nth-of-type(#{$i}){
+
+            @if $i < 4{
+
+              &:before{
+                content: '';
+                display: block;
+                width: 1px;
+                height: 196px;
+                border-right: 1px solid $c-accent-development;
+                position: absolute;
+                left: 14px;
+                top: 56px;
+              }
+
+              &:after{
+                content: '';
+                display: block;
+                width: 58px;
+                height: 59px;
+                position: absolute;
+                bottom: -14px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+
+              strong{
+
+                &:after{
+                  display: block;
+                  content: '';
+                  width: 10px;
+                  height: 10px;
+                  position: absolute;
+                  background: $c-accent-development;
+                  bottom: -176px;
+                  left: 50%;
+                  transform: rotate(45deg) translateX(-50%);
+                }
+              }
+            }
+
+            @if $i > 3{
+              margin-top: 50px;
+
+              &:before{
+                content: '';
+                display: block;
+                width: 58px;
+                height: 59px;
+                margin-top: 26px;
+                margin-bottom: 22px;
+                position: relative;
+                left: calc(50% - 20px);
+                transform: translateX(-50%);
+              }
+
+              strong{
+                top: 32px;
+              }
+            }
+
+            @if $i == 1{
+
+              strong{
+
+                &:before{
+                  content: '';
+                  display: block;
+                  width: 30px;
+                  height: 30px;
+                  border: 1px solid $c-accent-development;
+                  transform-origin: 50% 50%;
+                  left: calc(50% - 3px);
+                  transform: rotate(45deg) translateX(-50%);
+                  bottom: -195px;
+                  background: transparent;
+                  position: absolute;
+                }
+              }
+            }
+          }
+        }
+
+        @for $i from 1 through 6{
+
+          &:nth-of-type(#{$i}){
+
+            @if $i < 4{
+
+              &:after{
+                background: url('../images/icons/benefits/development/#{$i}.png') no-repeat center center;
+              }
+            }
+
+            @if $i > 3{
+
+              &:before{
+                background: url('../images/icons/benefits/development/#{$i}.png') no-repeat center center;
+              }
+            }
+
+            &:after{
+              background: url('../images/icons/benefits/development/#{$i}.png') no-repeat center center;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .container{
     width: 1200px;
+    min-width: 1200px;
     margin: 0 auto;
 
     &:before, &:after{
@@ -2283,10 +2751,6 @@ header{
     }
   }
 
-  &.marketing{
-
-  }
-
   ul.points{
     display: flex;
     justify-content: space-between;
@@ -2295,6 +2759,22 @@ header{
     padding-top: 80px;
     position: relative;
     z-index: 10;
+
+    @include r(1700){
+
+      &:before{
+        content: '';
+        display: block;
+        width: 250px;
+        height: 452px;
+        position: absolute;
+        left: -268px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url('../images/icons/d.png') no-repeat center center;
+        background-size: contain;
+      }
+    }
 
     &:after{
       content: '';
@@ -2305,7 +2785,6 @@ header{
       right: -21px;
       top: calc(50% + 6px);
       transform: translateY(-50%);
-      background: url('../images/icons/diamond-icon.png') no-repeat center center;
     }
 
     li{
@@ -2315,98 +2794,6 @@ header{
       font-size: 18px;
       position: relative;
       padding-left: 42px;
-
-      @for $i from 1 through 6{
-
-        &:nth-of-type(#{$i}){
-
-          @if $i < 4{
-
-            &:before{
-              content: '';
-              display: block;
-              width: 1px;
-              height: 196px;
-              border-right: 1px solid $c-accent;
-              position: absolute;
-              left: 13px;
-              top: 56px;
-            }
-
-            &:after{
-              content: '';
-              display: block;
-              width: 58px;
-              height: 59px;
-              position: absolute;
-              bottom: -14px;
-              left: 50%;
-              transform: translateX(-50%);
-              background: url('../images/icons/benefits/marketing/#{$i}.png') no-repeat center center;
-            }
-
-            strong{
-
-              &:after{
-                display: block;
-                content: '';
-                width: 10px;
-                height: 10px;
-                position: absolute;
-                background: $c-accent;
-                bottom: -176px;
-                left: 50%;
-                transform: rotate(45deg) translateX(-50%);
-              }
-            }
-          }
-
-          @if $i > 3{
-            margin-top: 50px;
-
-            &:before{
-              content: '';
-              display: block;
-              width: 58px;
-              height: 59px;
-              margin-top: 26px;
-              margin-bottom: 22px;
-              position: relative;
-              left: calc(50% - 20px);
-              transform: translateX(-50%);
-              background: url('../images/icons/benefits/marketing/#{$i}.png') no-repeat center center;
-            }
-
-            strong{
-              top: 32px;
-            }
-          }
-
-          @if $i == 1{
-
-            strong{
-
-              &:before{
-                content: '';
-                display: block;
-                width: 30px;
-                height: 30px;
-                border: 1px solid $c-accent;
-                transform-origin: 50% 50%;
-                left: calc(50% - 3px);
-                transform: rotate(45deg) translateX(-50%);
-                bottom: -195px;
-                background: transparent;
-                position: absolute;
-              }
-            }
-          }
-
-          &:after{
-            background: url('../images/icons/benefits/marketing/#{$i}.png') no-repeat center center;
-          }
-        }
-      }
 
       strong{
         position: absolute;
