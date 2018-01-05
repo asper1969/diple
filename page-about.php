@@ -34,10 +34,10 @@
             </div>
         </div>
     </div>
-    <div class="img">
+    <div class="diple">
         <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/d-alter.png" alt="">
-        <a href="#"><strong>Продвижение</strong> <span>сайтов</span></a>
-        <a href="#"><strong>Разработка</strong> <span>сайтов</span></a>
+        <a href="#" class="marketing"><strong>Продвижение</strong> <span>сайтов</span></a>
+        <a href="#" class="development"><strong>Разработка</strong> <span>сайтов</span></a>
     </div>
 </div>
 <div class="details">
@@ -182,25 +182,28 @@
     </div>
 </div>
 <div class="special">
-    <div class="container">
-        <h4 class="title">Заполните форму и получите бесплатно <br>
-            специальный пакет по продвижению <span>?</span></h4>
-        <div class="text">Lorem ipsum... какой-то текст по наведению на знак вопроса</div>
+    <div class="wrapper">
+        <div class="container">
+            <h4 class="title">Заполните форму и получите бесплатно <br>
+                специальный пакет по продвижению <span>?</span></h4>
+            <div class="text">Lorem ipsum... какой-то текст по наведению на знак вопроса</div>
+        </div>
+        <form id="about" class="form-special">
+            <input type="text" placeholder="Ваше имя*">
+            <input type="text" placeholder="Ваш телефон*">
+            <button type="submit">Получить пакет</button>
+        </form>
     </div>
-    <form class="special">
-        <input type="text" placeholder="Ваше имя*">
-        <input type="text" placeholder="Ваш телефон*">
-        <button type="submit">Получить пакет</button>
-    </form>
 </div>
 <div class="about-us">
-    <h2 class="title">Diple</h2>
-    <div class="text">Крупнейшая компания в Казахстане <br>
-        по настройке и продвижению контекстной рекламы</div>
-</div>
-<div class="benefits marketing">
     <div class="container">
-        <div class="swipe-btn">Закрыть</div>
+        <h2 class="title"><span>Diple</span></h2>
+        <div class="text">Крупнейшая компания в Казахстане <br>
+            по настройке и продвижению контекстной рекламы</div>
+    </div>
+</div>
+<div class="benefits about">
+    <div class="container">
         <ul class="points">
             <li class="point">
                 <strong>1</strong>Прописываем показатели в договоре, <br>

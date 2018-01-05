@@ -413,6 +413,95 @@ header{
   >.img{
     margin-right: 70px;
   }
+
+  >.diple{
+    display: flex;
+    justify-content: center;
+    width: 560px;
+    position: relative;
+    z-index: 10;
+
+    &:before{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      background: url('../images/about-element.png') no-repeat center center;
+    }
+
+    &:after{
+      content: '';
+      display: block;
+      width: 401px;
+      height: 252px;
+      position: absolute;
+      top: calc(50% + 34px);
+      left: calc(50% - 1px);
+      transform: translate(-50%, -50%);
+      background: url('../images/icons/diamond-alter.png') no-repeat center center;
+    }
+
+    a{
+      position: absolute;
+      color: $c-text;
+      font-weight: 700;
+      text-transform: uppercase;
+      z-index: 10;
+      //opacity: 0;
+
+      &.marketing{
+        bottom: 65px;
+        left: 9px;
+
+        &:hover{
+
+          strong{
+            background: $c-accent;
+          }
+
+          span{
+            text-shadow: 0 0 0 rgba($c-text, .2);
+          }
+        }
+      }
+
+      &.development{
+        top: 60px;
+        right: 52px;
+
+        &:hover{
+
+          strong{
+            background: $c-google;
+          }
+
+          span{
+            text-shadow: 0 0 0 rgba($c-text, .2);
+          }
+        }
+      }
+
+      strong{
+        display: inline-block;
+        padding: 2px 7px;
+        line-height: 21px;
+        color: #fff;
+        background: $c-text;
+
+        @include transite(all);
+      }
+
+      span{
+        text-shadow: 11px 6px 0 rgba($c-text, .2);
+
+        @include transite(all);
+      }
+    }
+  }
 }
 
 .details{
@@ -2613,7 +2702,8 @@ header{
       }
 
       &.about{
-        background: $c-about;
+        background: url('../images/about-bg.jpg') no-repeat center center;
+        background-size: cover;
 
         .presentation{
           width: 1200px;
@@ -3076,6 +3166,134 @@ header{
 
             &:after{
               background: url('../images/icons/benefits/development/#{$i}.png') no-repeat center center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.about{
+    background: url('../images/benefits-about.jpg') no-repeat center center;
+
+    &:after{
+      border-bottom: 1px solid $c-accent-about;
+    }
+
+    ul.points{
+
+      &:after{
+        background: url('../images/icons/diamond-icon-about.png') no-repeat center center;
+      }
+
+      li{
+
+        @for $i from 1 through 6{
+
+          &:nth-of-type(#{$i}){
+
+            @if $i < 4{
+
+              &:before{
+                content: '';
+                display: block;
+                width: 1px;
+                height: 196px;
+                border-right: 1px solid $c-accent-about;
+                position: absolute;
+                left: 14px;
+                top: 56px;
+              }
+
+              &:after{
+                content: '';
+                display: block;
+                width: 58px;
+                height: 59px;
+                position: absolute;
+                bottom: -14px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+
+              strong{
+
+                &:after{
+                  display: block;
+                  content: '';
+                  width: 10px;
+                  height: 10px;
+                  position: absolute;
+                  background: $c-accent-about;
+                  bottom: -176px;
+                  left: 50%;
+                  transform: rotate(45deg) translateX(-50%);
+                }
+              }
+            }
+
+            @if $i > 3{
+              margin-top: 50px;
+
+              &:before{
+                content: '';
+                display: block;
+                width: 58px;
+                height: 59px;
+                margin-top: 26px;
+                margin-bottom: 22px;
+                position: relative;
+                left: calc(50% - 20px);
+                transform: translateX(-50%);
+              }
+
+              strong{
+                top: 32px;
+              }
+            }
+
+            @if $i == 1{
+
+              strong{
+
+                &:before{
+                  content: '';
+                  display: block;
+                  width: 30px;
+                  height: 30px;
+                  border: 1px solid $c-accent-about;
+                  transform-origin: 50% 50%;
+                  left: calc(50% - 3px);
+                  transform: rotate(45deg) translateX(-50%);
+                  bottom: -195px;
+                  background: transparent;
+                  position: absolute;
+                }
+              }
+            }
+          }
+        }
+
+        @for $i from 1 through 6{
+
+          &:nth-of-type(#{$i}){
+
+            @if $i < 4{
+
+              &:after{
+                background: url('../images/icons/benefits/about/#{$i}.png') no-repeat center center;
+              }
+            }
+
+            @if $i > 3{
+
+              &:before{
+                background: url('../images/icons/benefits/about/#{$i}.png') no-repeat center center;
+              }
+            }
+
+            &:after{
+              background: url('../images/icons/benefits/about/#{$i}.png') no-repeat center center;
             }
           }
         }
