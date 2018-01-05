@@ -1,32 +1,36 @@
 <?php get_header(); ?>
 
 <div class="packages">
-    <div class="container">
-        <h2 class="title">
-            <strong>мы поможем разработать и внедрить <br>
-                эффективные IT технологии в ваш бизнес</strong>
-        </h2>
-        <div class="pager-wrapper"></div>
-        <div class="slider">
-            <div class="slide">
-                <div class="sub-title">Бесплатно</div>
-                <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
-                <a href="#" class="btn btn-more">Смотрите подробнее</a>
-            </div>
-            <div class="slide">
-                <div class="sub-title">Бесплатно</div>
-                <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
-                <a href="#" class="btn btn-more">Смотрите подробнее</a>
-            </div>
-            <div class="slide">
-                <div class="sub-title">Бесплатно</div>
-                <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
-                <a href="#" class="btn btn-more">Смотрите подробнее</a>
-            </div>
-            <div class="slide">
-                <div class="sub-title">Бесплатно</div>
-                <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
-                <a href="#" class="btn btn-more">Смотрите подробнее</a>
+    <div class="wrapper">
+        <div class="package active">
+            <div class="container">
+                <h2 class="title">
+                    <strong>мы поможем разработать и внедрить <br>
+                        эффективные IT технологии в ваш бизнес</strong>
+                </h2>
+                <div class="pager-wrapper"></div>
+                <div class="slider">
+                    <div class="slide">
+                        <div class="sub-title">Бесплатно</div>
+                        <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
+                        <a href="#" class="btn btn-more">Смотрите подробнее</a>
+                    </div>
+                    <div class="slide">
+                        <div class="sub-title">Бесплатно</div>
+                        <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
+                        <a href="#" class="btn btn-more">Смотрите подробнее</a>
+                    </div>
+                    <div class="slide">
+                        <div class="sub-title">Бесплатно</div>
+                        <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
+                        <a href="#" class="btn btn-more">Смотрите подробнее</a>
+                    </div>
+                    <div class="slide">
+                        <div class="sub-title">Бесплатно</div>
+                        <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
+                        <a href="#" class="btn btn-more">Смотрите подробнее</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -37,87 +41,94 @@
     </div>
 </div>
 <div class="details">
-    <div class="triggers">
-        <h3 class="img package active">
-            Разработка сайтов
-        </h3>
-        <h3 class="img package">
-            Продвижение
-        </h3>
-    </div>
-    <div class="wrapper about-us">
-        <div class="package yandex active">
-            <div class="package-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/about.jpg" alt="">
+    <div class="container">
+        <div class="triggers">
+            <h3 class="img package active">
+                Разработка сайтов
+            </h3>
+            <h3 class="img package">
+                Продвижение
+            </h3>
+        </div>
+        <div class="wrapper about-us">
+            <div class="package yandex active">
+                <div class="package-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/about.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <p>Создание уникальных сайтов</p>
+                        <p>без шаблонов!</p>
+                    </div>
+                    <div class="text">
+                        <ul>
+                            <li>Посадочные страницы (Landing page), <br>
+                                с гарантией результата
+                            </li>
+                            <li>Корпоративные сайты с чем-то <br>
+                                хорошим и важным</li>
+                            <li>Интернет-магазины и многостраничные <br>
+                                сайты “под ключ”</li>
+                        </ul>
+                    </div>
+                    <div class="btns">
+                        <div class="btns">
+                            <a href="#" class="btn btn-how">Подробнее о приемуществах</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="info">
-                <div class="title">
-                    <p>Создание уникальных сайтов</p>
-                    <p>без шаблонов!</p>
+            <div class="package google">
+                <div class="package-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/about.jpg" alt="">
                 </div>
-                <div class="text">
-                    <ul>
-                        <li>Посадочные страницы (Landing page), <br>
-                            с гарантией результата
-                        </li>
-                        <li>Корпоративные сайты с чем-то <br>
-                            хорошим и важным</li>
-                        <li>Интернет-магазины и многостраничные <br>
-                            сайты “под ключ”</li>
-                    </ul>
-                </div>
-                <div class="btns">
+                <div class="info">
+                    <div class="title">
+                        <div class="title">
+                            <p>Создание уникальных сайтов</p>
+                            <p>без шаблонов!</p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <ul>
+                            <li>Посадочные страницы (Landing page), <br>
+                                с гарантией результата
+                            </li>
+                            <li>Корпоративные сайты с чем-то <br>
+                                хорошим и важным</li>
+                            <li>Интернет-магазины и многостраничные <br>
+                                сайты “под ключ”</li>
+                        </ul>
+                    </div>
                     <div class="btns">
                         <a href="#" class="btn btn-how">Подробнее о приемуществах</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="package google">
-            <div class="package-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/about.jpg" alt="">
-            </div>
-            <div class="info">
-                <div class="title">
-                    <div class="title">
-                        <p>Создание уникальных сайтов</p>
-                        <p>без шаблонов!</p>
-                    </div>
-                </div>
-                <div class="text">
-                    <ul>
-                        <li>Посадочные страницы (Landing page), <br>
-                            с гарантией результата
-                        </li>
-                        <li>Корпоративные сайты с чем-то <br>
-                            хорошим и важным</li>
-                        <li>Интернет-магазины и многостраничные <br>
-                            сайты “под ключ”</li>
-                    </ul>
-                </div>
-                <div class="btns">
-                    <a href="#" class="btn btn-how">Подробнее о приемуществах</a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 <div class="presentations">
-    <h2 class="title">Как это работает</h2>
-    <div class="wrapper">
-        <div class="directions">
-            <p class="direction active">
-                Команда профессионалов
-            </p>
-            <p class="direction">
-                Технические решения
-            </p>
-            <p class="direction">
-                Уникальный подход
-            </p>
+    <div class="container">
+        <div class="triggers">
+            <h2 class="title">Наши преимущества</h2>
+            <div class="triggers-directions">
+                <p class="direction active">
+                    Команда профессионалов
+                </p>
+                <p class="direction">
+                    Технические решения
+                </p>
+                <p class="direction">
+                    Уникальный подход
+                </p>
+            </div>
+            <div class="swipe-btn">Закрыть</div>
         </div>
-        <div class="package about">
-            <div class="presentation">
+    </div>
+    <div class="wrapper">
+        <div class="package about active">
+            <div class="presentation active">
                 <div class="slide slide-1" data-index="1">
                     <h4 class="subtitle">
                         Команда профессионалов с 10-ти летним <br>
@@ -161,9 +172,9 @@
                     <ul class="points">
                         <li class="point">Прописываем показатели конверсии в <br>
                             договоре, даем юоидические гарантии
-                        <em>Возвращаем деньги при отсутствии <br>результата</em></li>
+                            <em>Возвращаем деньги при отсутствии <br>результата</em></li>
                         <li class="point">Разбиваем оплату на несколько <br>частей!
-                        <em>Вы получаете готовый результат, на <br>каждом этапе оплаты</em></li>
+                            <em>Вы получаете готовый результат, на <br>каждом этапе оплаты</em></li>
                     </ul>
                 </div>
             </div>
