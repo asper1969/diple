@@ -1,5 +1,6 @@
 require('waypoints/lib/noframework.waypoints.min.js');
 require('waypoints/lib/shortcuts/inview.min.js');
+require('fancybox')($);
 import {slick} from 'slick-carousel';
 import {TimelineMax} from 'gsap';
 import changePackage from './modules/changePackage.js';
@@ -41,5 +42,15 @@ $(document).ready(()=>{
             $(this).closest('.fields').find('.field.checked').removeClass('checked');
             $(this).parent().addClass('checked');
         }
+    });
+
+    $('.slide .document a').fancybox();
+    $('.slide .awards').slick({
+        slidesToShow: 2,
+        variableWidth: true
+    });
+    $('.slide .documents').slick({
+        slidesToShow: 4,
+        variableWidth: true
     });
 });

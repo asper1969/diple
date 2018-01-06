@@ -143,8 +143,47 @@
                             условия</li>
                     </ul>
                     <div class="sliders">
-                        <div class="awwards">awwwwards</div>
-                        <div class="documents">documents slider</div>
+                        <ul class="awards">
+                            <li class="award">
+                                <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/award.png">
+                            </li>
+                            <li class="award">
+                                <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/award.png">
+                            </li>
+                            <li class="award">
+                                <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/award.png">
+                            </li>
+                            <li class="award">
+                                <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/award.png">
+                            </li>
+                        </ul>
+                        <ul class="documents">
+                            <li class="document">
+                                <a href="<?php echo get_template_directory_uri(); ?>/prod/images/content/documents/full/1.jpg">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/documents/thumbs/1.jpg">
+                                </a>
+                            </li>
+                            <li class="document">
+                                <a href="<?php echo get_template_directory_uri(); ?>/prod/images/content/documents/full/1.jpg">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/documents/thumbs/1.jpg">
+                                </a>
+                            </li>
+                            <li class="document">
+                                <a href="<?php echo get_template_directory_uri(); ?>/prod/images/content/documents/full/1.jpg">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/documents/thumbs/1.jpg">
+                                </a>
+                            </li>
+                            <li class="document">
+                                <a href="<?php echo get_template_directory_uri(); ?>/prod/images/content/documents/full/1.jpg">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/documents/thumbs/1.jpg">
+                                </a>
+                            </li>
+                            <li class="document">
+                                <a href="<?php echo get_template_directory_uri(); ?>/prod/images/content/documents/full/1.jpg">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/documents/thumbs/1.jpg">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="slide slide-2" data-index="2">
