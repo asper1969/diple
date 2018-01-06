@@ -489,7 +489,7 @@
                 </div>
             </div>
         </div>
-        <div class="package google">
+        <div class="package google active">
             <div class="presentation search active">
                 <div class="slide slide-1" data-index="1">
                     <ul class="points">
@@ -567,7 +567,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="presentation banner">
+            <div class="presentation banner active">
                 <div class="slide slide-1" data-index="1">
                     <h4 class="subtitle">Тысячи популярных сайтов партнеров <br>
                         Гугл Директ</h4>
@@ -632,7 +632,7 @@
                 специальный пакет по продвижению <span>?</span></h4>
             <div class="text">Lorem ipsum... какой-то текст по наведению на знак вопроса</div>
         </div>
-        <form class="form-special">
+        <form id="marketing" class="form-special">
             <input type="text" placeholder="Ваше имя*">
             <input type="text" placeholder="Ваш телефон*">
             <button type="submit">Получить пакет</button>
