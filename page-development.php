@@ -13,24 +13,21 @@
                     <div class="slide">
                         <div class="sub-title">Бесплатно</div>
                         <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
-                        <a href="#" class="btn btn-more">Смотрите подробнее</a>
                     </div>
                     <div class="slide">
                         <div class="sub-title">Бесплатно</div>
                         <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
-                        <a href="#" class="btn btn-more">Смотрите подробнее</a>
                     </div>
                     <div class="slide">
                         <div class="sub-title">Бесплатно</div>
                         <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
-                        <a href="#" class="btn btn-more">Смотрите подробнее</a>
                     </div>
                     <div class="slide">
                         <div class="sub-title">Бесплатно</div>
                         <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
-                        <a href="#" class="btn btn-more">Смотрите подробнее</a>
                     </div>
                 </div>
+                <a href="#" class="btn btn-more">Смотрите подробнее</a>
             </div>
         </div>
     </div>
@@ -39,7 +36,7 @@
     </div>
 </div>
 <div class="details">
-    <div class="container">
+    <div class="container development">
         <div class="wrapper">
             <div class="package active">
                 <div class="package-img development">
@@ -69,7 +66,6 @@
                     <div class="btns">
                         <a href="#" class="btn btn-calc">Калькулятор расчета</a>
                         <a href="#" class="btn btn-how">Как это работает</a>
-                        <div class="swipe-btn">+</div>
                     </div>
                 </div>
             </div>

@@ -33,6 +33,14 @@ body{
 
 .promos{
   background: $c-accent;
+  max-height: 0;
+  overflow: hidden;
+
+  @include transite(all);
+
+  &.active{
+    max-height: 46px;
+  }
 
   .container{
     width: 1200px;
@@ -130,11 +138,30 @@ header{
       display: block;
       height: 100%;
       margin-right: 38px;
+      position: relative;
 
     //TODO: border bottom on active link
 
       &:last-of-type{
         margin-right: 0;
+      }
+
+      &.current-menu-item{
+
+        &:after{
+          content: '';
+          display: block;
+          height: 1px;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: -41px;
+          border-bottom: 3px solid $c-border;
+        }
+
+        a{
+          font-weight: 700;
+        }
       }
     }
 
@@ -156,6 +183,13 @@ header{
       margin-right: 17px;
       text-indent: -99999px;
       display: block;
+      opacity: .7;
+
+      @include transite(all);
+
+      &.active, &:hover{
+        opacity: 1;
+      }
 
       &:last-of-type{
         margin-right: 0;
@@ -328,6 +362,10 @@ header{
         }
       }
 
+      .slick-dotted.slick-slider{
+        margin-bottom: 0;
+      }
+
       .slider{
 
         .slide{
@@ -343,23 +381,23 @@ header{
             margin-top: 20px;
             margin-bottom: 36px;
           }
+        }
+      }
 
-          .btn-more{
-            display: inline-block;
-            padding: 0 24px;
-            line-height: 43px;
-            border-radius: 4px;
-            border: 1px solid $c-border;
-            color: $c-text;
+      .btn-more{
+        display: inline-block;
+        padding: 0 24px;
+        line-height: 43px;
+        border-radius: 4px;
+        border: 1px solid $c-border;
+        color: $c-text;
 
-            @include transite(all);
+        @include transite(all);
 
-            &:hover{
-              background: $c-accent;
-              border-color: $c-accent;
-              color: #fff;
-            }
-          }
+        &:hover{
+          background: $c-accent;
+          border-color: $c-accent;
+          color: #fff;
         }
       }
     }
@@ -511,6 +549,10 @@ header{
     width: 1200px;
     margin: 0 auto;
     padding: 50px 20px 0;
+
+    &.development{
+      padding-top: 110px;
+    }
   }
 
   .triggers{
@@ -700,6 +742,13 @@ header{
               padding-left: 53px;
               position: relative;
 
+              &:hover{
+
+                &:before{
+                  filter: brightness(150%);
+                }
+              }
+
               &:before{
                 content: '';
                 display: block;
@@ -710,6 +759,8 @@ header{
                 height: 29px;
                 transform: translateY(-50%);
                 background: url('../images/icons/calc.png');
+
+                @include transite(all)
               }
             }
           }
@@ -996,6 +1047,10 @@ header{
 
       &:hover{
         //color: $c-accent;
+
+        &:after{
+          filter: brightness(150%);
+        }
       }
 
       &:after{
@@ -1008,6 +1063,8 @@ header{
         width: 28px;
         height: 27px;
         background: url('../images/icons/close-alter.png');
+
+        @include transite(all);
       }
     }
 
@@ -1104,7 +1161,8 @@ header{
       }
 
       &.yandex{
-        background: $c-yandex;
+        background: url('../images/yandex-bg.jpg') no-repeat center center;
+        background-size: cover;
 
         .presentation{
 
@@ -1725,7 +1783,8 @@ header{
       }
 
       &.google{
-        background: $c-google;
+        background: url('../images/google-bg.jpg') no-repeat center center;
+        background-size: cover;
 
         .presentation{
           width: 1200px;
@@ -2917,6 +2976,17 @@ header{
 
             &:nth-of-type(3){
 
+              &:after{
+                content: '';
+                display: block;
+                width: 272px;
+                height: 272px;
+                background: url('../images/icons/diple-sticker.png') no-repeat center center;
+                position: absolute;
+                top: 212px;
+                right: 106px;
+              }
+
               ul.points{
                 color: #fff;
                 position: absolute;
@@ -2933,6 +3003,10 @@ header{
                 li.point{
                   position: relative;
                   padding-left: 130px;
+
+                  &:first-of-type{
+                    margin-bottom: 84px;
+                  }
 
                   &:before{
                     content: '';
@@ -3022,6 +3096,14 @@ header{
       right: 0;
       bottom: 3px;
       cursor: pointer;
+
+      @include transite(all);
+
+      &:hover{
+        color: #fff;
+        background: $c-accent;
+        border-color: $c-accent;
+      }
     }
   }
 
@@ -3035,7 +3117,7 @@ header{
     padding: 20px;
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 55px;
     visibility: hidden;
     opacity: 0;
     background: #fff;
@@ -3741,4 +3823,94 @@ footer{
       }
     }
   }
+}
+
+.hidden-region{
+  display: none;
+}
+
+form.pop-up, #success{
+  background: #fff;
+  width: 500px;
+  padding: 20px 30px 50px;
+  text-align: center;
+
+  .form-error{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .title{
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $c-text;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .subtitle{
+    color: $c-text;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  fieldset.inputs{
+
+    input{
+      display: block;
+      border: none;
+      border-bottom: 1px solid $c-border;
+      margin-bottom: 22px;
+      width: 100%;
+      height: 30px;
+      background: transparent;
+
+      &:first-of-type{
+        margin-top: 12px;
+      }
+    }
+
+    textarea{
+      border: none;
+      border-bottom: 1px solid $c-border;
+      margin-bottom: 22px;
+      height: 50px;
+      width: 100%;
+      font: 14px 'Ubuntu';
+    }
+  }
+
+  button{
+    display: inline-block;
+    border: 1px solid $c-border;
+    background: transparent;
+    border-radius: 4px;
+    height: 43px;
+    padding: 0 50px;
+    line-height: 43px;
+    color: #000;
+    margin: 0 auto;
+    font-size: 14px;
+
+    @include transite(all);
+
+    &:hover{
+      color: #fff;
+      background: $c-accent;
+      border-color: $c-accent;
+    }
+  }
+}
+
+.fancybox-wrap, .fancybox-wrap *{
+  -moz-box-sizing: content-box !important;
+  -webkit-box-sizing: content-box !important;
+  -safari-box-sizing: content-box !important;
+  box-sizing: content-box !important;
 }

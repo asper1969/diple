@@ -13,31 +13,28 @@
                     <div class="slide">
                         <div class="sub-title">Бесплатно</div>
                         <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
-                        <a href="#" class="btn btn-more">Смотрите подробнее</a>
                     </div>
                     <div class="slide">
                         <div class="sub-title">Бесплатно</div>
                         <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
-                        <a href="#" class="btn btn-more">Смотрите подробнее</a>
                     </div>
                     <div class="slide">
                         <div class="sub-title">Бесплатно</div>
                         <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
-                        <a href="#" class="btn btn-more">Смотрите подробнее</a>
                     </div>
                     <div class="slide">
                         <div class="sub-title">Бесплатно</div>
                         <div class="text">Если Ваш планируемый ежемесячный бюджет привышает 30 000 тг, мы бесплатно сделаем полноценную настройку контекстной рекламы!</div>
-                        <a href="#" class="btn btn-more">Смотрите подробнее</a>
                     </div>
                 </div>
+                <a href="#" class="btn btn-more">Смотрите подробнее</a>
             </div>
         </div>
     </div>
     <div class="diple">
         <img src="<?php echo get_template_directory_uri(); ?>/prod/images/icons/d-alter.png" alt="">
-        <a href="#" class="marketing"><strong>Продвижение</strong> <span>сайтов</span></a>
-        <a href="#" class="development"><strong>Разработка</strong> <span>сайтов</span></a>
+        <a href="/" class="marketing"><strong>Продвижение</strong> <span>сайтов</span></a>
+        <a href="/development" class="development"><strong>Разработка</strong> <span>сайтов</span></a>
     </div>
 </div>
 <div class="details">
