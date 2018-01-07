@@ -3,7 +3,9 @@ require('waypoints/lib/shortcuts/inview.min.js');
 require('jquery-form-validator/form-validator/jquery.form-validator.min.js');
 require('fancybox')($);
 import {slick} from 'slick-carousel';
-import {TimelineMax} from 'gsap';
+const ScrollMagic = require('ScrollMagic');
+require('animation.gsap');
+const TimelineMax = require('TimelineMax');
 import changePackage from './modules/changePackage.js';
 jQuery.extend(jQuery.easing,{easeInOutExpo:function(e,f,a,h,g){if(f==0){return a}if(f==g){return a+h}if((f/=g/2)<1){return h/2*Math.pow(2,10*(f-1))+a}return h/2*(-Math.pow(2,-10*--f)+2)+a}});
 
@@ -78,6 +80,17 @@ $(document).ready(()=>{
     });
 
     fancyboxModule.init();
+
+    var controller = new ScrollMagic.Controller();
+    var wipeAnimation = new TimelineMax()
+        .fromTo(".benefits", 1, {height: "0", opacity: 0}, {height: "600px", opacity: 1, ease: Linear.easeNone});
+    new ScrollMagic.Scene({
+        triggerElement: ".about-us",
+        triggerHook: "onLeave",
+        duration: 500
+    })
+        .setTween(wipeAnimation)
+        .addTo(controller);
 });
 
 function scrollTo($target){

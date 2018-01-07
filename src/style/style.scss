@@ -3228,11 +3228,13 @@ header{
 }
 
 .benefits{
-  height: 600px;
+  height: 0;
+  opacity: 0;
   background-size: cover;
   position: relative;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 
   &:before{
     content: '';
