@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="packages">
+<div class="packages packages-about">
     <div class="wrapper">
         <div class="package active static">
             <div class="container">

@@ -23,10 +23,10 @@ module.exports = {
             jQuery: "jquery",
             'window.jQuery': "jquery"
         }),
-        //new webpack.optimize.UglifyJsPlugin({
-        //    minimize: true,
-        //    extractComments: true,
-        //})
+        new webpack.optimize.UglifyJsPlugin({
+            minimize: true,
+            extractComments: true,
+        })
     ],
     resolve: {
         alias: {

@@ -222,6 +222,10 @@ header{
   display: flex;
   justify-content: space-between;
 
+  &.packages-about{
+    margin: 38px auto 50px;
+  }
+
   .wrapper{
     height: 468px;
   }
@@ -820,7 +824,7 @@ header{
 
   >.swipe-btn{
     position: absolute;
-    top: 5px;
+    top: 50px;
     right: 20px;
     color: $c-menu-link-hover;
     padding-right: 38px;
@@ -1376,11 +1380,11 @@ header{
 
               &.slide-2{
                 position: relative;
-                background-position: 410px center !important;
+                background-position: 410px 130px !important;
 
                 ul.points{
                   position: absolute;
-                  bottom: 124px;
+                  bottom: 72px;
                   color: #fff;
                   font-weight: 500;
                   font-size: 18px;
@@ -1424,7 +1428,7 @@ header{
                   font-size: 18px;
                   font-style: italic;
                   font-weight: 500;
-                  top: 194px;
+                  top: 154px;
                   left: 120px;
 
                   li.point{
@@ -1457,7 +1461,7 @@ header{
 
                 ul.points{
                   position: absolute;
-                  bottom: 124px;
+                  bottom: 127px;
                   color: #fff;
                   font-weight: 500;
                   font-size: 18px;
@@ -1569,7 +1573,7 @@ header{
                     }
 
                     &:first-of-type{
-                      top: 295px;
+                      top: 255px;
                       left: 125px;
 
                       strong{
@@ -1580,7 +1584,7 @@ header{
                     }
 
                     &:nth-of-type(2){
-                      top: 426px;
+                      top: 387px;
                       left: 125px;
 
                       strong{
@@ -1592,7 +1596,7 @@ header{
 
                     &:nth-of-type(3){
                       left: auto;
-                      top: 38px;
+                      top: 0;
                       right: -40px;
                     }
                   }
@@ -1601,11 +1605,11 @@ header{
 
               &.slide-2{
                 position: relative;
-                background-position: 80px center;;
+                background-position: 80px 225px;
 
                 ul.points{
                   position: absolute;
-                  top: 68px;
+                  top: 90px;
                   color: #fff;
                   font-weight: 500;
                   font-size: 16px;
@@ -1835,7 +1839,7 @@ header{
 
               &.slide-3{
                 position: relative;
-                background-position-x: 382px;
+                background-position-x: 410px;
 
                 ul.points{
                   position: absolute;
@@ -1846,7 +1850,7 @@ header{
                   font-style: italic;
                   padding: 30px 0;
                   border-right: 1px solid #fff;
-                  left: 130px;
+                  left: 157px;
 
                   &:after{
                     content: '';
@@ -2006,11 +2010,11 @@ header{
 
               &.slide-2{
                 position: relative;
-                background-position: 410px center !important;
+                background-position: 410px 130px !important;
 
                 ul.points{
                   position: absolute;
-                  bottom: 124px;
+                  bottom: 72px;
                   color: #fff;
                   font-weight: 500;
                   font-size: 18px;
@@ -2054,7 +2058,7 @@ header{
                   font-size: 18px;
                   font-style: italic;
                   font-weight: 500;
-                  top: 194px;
+                  top: 154px;
                   left: 120px;
 
                   li.point{
@@ -2087,7 +2091,7 @@ header{
 
                 ul.points{
                   position: absolute;
-                  bottom: 124px;
+                  bottom: 127px;
                   color: #fff;
                   font-weight: 500;
                   font-size: 18px;
@@ -2199,7 +2203,7 @@ header{
                     }
 
                     &:first-of-type{
-                      top: 295px;
+                      top: 255px;
                       left: 125px;
 
                       strong{
@@ -2210,7 +2214,7 @@ header{
                     }
 
                     &:nth-of-type(2){
-                      top: 426px;
+                      top: 387px;
                       left: 125px;
 
                       strong{
@@ -2222,7 +2226,7 @@ header{
 
                     &:nth-of-type(3){
                       left: auto;
-                      top: 38px;
+                      top: 0;
                       right: -40px;
                     }
                   }
@@ -2231,11 +2235,11 @@ header{
 
               &.slide-2{
                 position: relative;
-                background-position: 80px center;;
+                background-position: 80px 225px;
 
                 ul.points{
                   position: absolute;
-                  top: 68px;
+                  top: 90px;
                   color: #fff;
                   font-weight: 500;
                   font-size: 16px;
@@ -2465,7 +2469,7 @@ header{
 
               &.slide-3{
                 position: relative;
-                background-position-x: 382px;
+                background-position-x: 410px;
 
                 ul.points{
                   position: absolute;
@@ -2476,7 +2480,7 @@ header{
                   font-style: italic;
                   padding: 30px 0;
                   border-right: 1px solid #fff;
-                  left: 130px;
+                  left: 157px;
 
                   &:after{
                     content: '';
@@ -2681,7 +2685,7 @@ header{
               background-position: 90px bottom;
 
               .pointer{
-                bottom: 239px;
+                bottom: 223px;
                 left: 524px;
               }
 
@@ -2709,7 +2713,7 @@ header{
                 li.point{
                   position: relative;
                   padding-left: 74px;
-                  margin-bottom: 54px;
+                  margin-bottom: 46px;
 
                   &:last-of-type{
                     margin-bottom: 0;
@@ -2744,7 +2748,7 @@ header{
                       border-right: 1px solid $c-presentation-development;
                       height: 14px;
                       position: absolute;
-                      bottom: -29px;
+                      bottom: -25px;
                       left: 50%;
                     }
                   }
@@ -2757,7 +2761,7 @@ header{
               
               ul.points{
                 position: absolute;
-                top: 166px;
+                top: 175px;
                 left: calc(50% + 20px);
                 color: #fff;
                 border-left: 1px solid $c-presentation-development;
@@ -2765,6 +2769,18 @@ header{
                 font-weight: 500;
                 font-style: italic;
                 padding-left: 76px;
+
+                &:before{
+                  content: '';
+                  display: block;
+                  width: 150px;
+                  height: 1px;
+                  position: absolute;
+                  top: 50%;
+                  left: -150px;
+                  border-bottom: 1px solid $c-presentation-development;
+                  transform: translateY(-50%);
+                }
 
                 li.point{
                   margin-bottom: 36px;
@@ -3024,6 +3040,7 @@ header{
                 }
                 .slick-next{
                   right: -62px;
+                  top: 22px;
                 }
 
                 li.award{
