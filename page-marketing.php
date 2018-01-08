@@ -326,7 +326,7 @@
         </div>
     </div>
 </div>
-<div class="presentations">
+<div class="presentations presentations-marketing">
     <div class="container">
         <div class="triggers">
             <h2 class="title">Как это работает</h2>
@@ -430,7 +430,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="presentation banner active">
+            <div class="presentation banner">
                 <div class="slide slide-1" data-index="1">
                     <h4 class="subtitle">Тысячи популярных сайтов партнеров <br>
                         Яндекс Директ</h4>
@@ -486,7 +486,7 @@
                 </div>
             </div>
         </div>
-        <div class="package google active">
+        <div class="package google">
             <div class="presentation search active">
                 <div class="slide slide-1" data-index="1">
                     <ul class="points">
@@ -564,7 +564,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="presentation banner active">
+            <div class="presentation banner">
                 <div class="slide slide-1" data-index="1">
                     <h4 class="subtitle">Тысячи популярных сайтов партнеров <br>
                         Гугл Директ</h4>
@@ -636,7 +636,7 @@
         </form>
     </div>
 </div>
-<div class="about-us">
+<div class="about-us shield">
     <div class="container">
         <h2 class="title"><span>Diple</span></h2>
         <div class="text">Крупнейшая компания в Казахстане <br>

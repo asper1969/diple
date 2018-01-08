@@ -38,7 +38,7 @@
 <div class="details">
     <div class="container development">
         <div class="wrapper">
-            <div class="package active">
+            <div class="package active static">
                 <div class="package-img development">
                     <img src="<?php echo get_template_directory_uri(); ?>/prod/images/content/web-dev.jpg" alt="">
                 </div>
@@ -168,18 +168,18 @@
         </div>
     </div>
 </div>
-<div class="presentations">
+<div class="presentations presentations-development">
     <div class="container">
         <div class="triggers">
             <h2 class="title">Как это работает</h2>
             <div class="triggers-directions">
-                <p class="direction active">
+                <p class="direction active" data-index="1">
                     Прототипирование
                 </p>
-                <p class="direction">
+                <p class="direction" data-index="2">
                     Разработка дизайн-макета
                 </p>
-                <p class="direction">
+                <p class="direction" data-index="3">
                     Верстка сайта и размещение на хостинге
                 </p>
             </div>
@@ -253,7 +253,7 @@
         </form>
     </div>
 </div>
-<div class="about-us">
+<div class="about-us shield">
     <div class="container">
         <h2 class="title"><span>Diple</span></h2>
         <div class="text">Крупнейшая компания в Казахстане <br>

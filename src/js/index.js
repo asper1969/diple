@@ -7,6 +7,7 @@ const ScrollMagic = require('ScrollMagic');
 require('animation.gsap');
 const TimelineMax = require('TimelineMax');
 import changePackage from './modules/changePackage.js';
+import presentation from './modules/presentationChanges.js';
 jQuery.extend(jQuery.easing,{easeInOutExpo:function(e,f,a,h,g){if(f==0){return a}if(f==g){return a+h}if((f/=g/2)<1){return h/2*Math.pow(2,10*(f-1))+a}return h/2*(-Math.pow(2,-10*--f)+2)+a}});
 
 $(document).ready(()=>{
@@ -47,6 +48,85 @@ $(document).ready(()=>{
         return false;
     });
 
+    $('.presentations-development .container .triggers-directions .direction, ' +
+        '.presentations-about .container .triggers-directions .direction').click(function(){
+
+        if(!$(this).hasClass('active')){
+            let index = $(this).attr('data-index');
+            //$(this).parent().find('.active').removeClass('active');
+            //$(this).addClass('active');
+            $('.presentations .wrapper .package .presentation').slick('slickGoTo', index-1);
+        }
+    });
+
+    $('.presentations-development .wrapper .package .presentation, ' +
+        '.presentations-about .wrapper .package .presentation').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        let index = nextSlide + 1;
+        $('.presentations .container .triggers-directions .direction.active').removeClass('active');
+        $('.presentations .container ' +
+            '.triggers-directions .direction[data-index="' + index +'"]').addClass('active');
+        console.log(index);
+    });
+
+    $('.details .wrapper .package .info .btns a.btn-calc').click(function(){
+        $('.calculators').toggleClass('active');
+
+        if($('.calculators').hasClass('active')){
+            var animation = new TimelineMax()
+                .to(".calculators", .3, {minHeight: "600px", opacity: 1, paddingTop: "40px", ease: Linear.easeNone});
+            scrollTo($('.calculators'));
+        }else{
+            var animation = new TimelineMax()
+                .to(".calculators", .3, {minHeight: "0px", opacity: 0, paddingTop: "0px", ease: Linear.easeNone});
+                scrollTo($('.details'));
+        }
+
+        return false;
+    });
+
+    $('.details .wrapper .package .info .btns a.btn-how').click(function(){
+        $('.presentations').toggleClass('active');
+
+        if($('.presentations').hasClass('active')){
+            var animation = new TimelineMax()
+                .to(".presentations", .3, {minHeight: "600px", opacity: 1, ease: Linear.easeNone});
+            scrollTo($('.presentations'));
+        }else{
+            var animation = new TimelineMax()
+                .to(".presentations", .3, {minHeight: "0px", opacity: 0, ease: Linear.easeNone});
+            scrollTo($('.details'));
+        }
+
+        return false;
+    });
+
+    $('.calculators>.swipe-btn').click(function(){
+
+        if($('.calculators').hasClass('active')){
+            var animation = new TimelineMax()
+                .to(".calculators", .3, {minHeight: "0px", opacity: 0, paddingTop: "0px", ease: Linear.easeNone});
+            $('.calculators').removeClass('active');
+            scrollTo($('.details'));
+        }
+    });
+    $('.presentations .triggers>.swipe-btn').click(function(){
+
+        if($('.presentations').hasClass('active')){
+            var animation = new TimelineMax()
+                .to(".presentations", .3, {minHeight: "0px", opacity: 0, ease: Linear.easeNone});
+            $('.presentations').removeClass('active');
+            scrollTo($('.details'));
+        }
+    });
+
+    $('.presentations .wrapper .package .presentation').slick({
+        slidesToShow: 1,
+        fade: true,
+        dots: true,
+    });
+
+    presentation.init();
+
     $('.special .container .title span').hover(
         function(){
             $(this).closest('.container').find('.text').addClass('active');
@@ -85,9 +165,10 @@ $(document).ready(()=>{
     var wipeAnimation = new TimelineMax()
         .fromTo(".benefits", 1, {height: "0", opacity: 0}, {height: "600px", opacity: 1, ease: Linear.easeNone});
     new ScrollMagic.Scene({
-        triggerElement: ".about-us",
-        triggerHook: "onLeave",
-        duration: 500
+        triggerElement: ".benefits",
+        triggerHook: "onEnter",
+        duration: 500,
+        offset: 150
     })
         .setTween(wipeAnimation)
         .addTo(controller);

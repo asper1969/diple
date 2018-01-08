@@ -1,15 +1,17 @@
 let changePackage = {
 
     settings: {
-        triggers: $('.packages .img img, .details .triggers .img img'),
+        triggers: $('.packages .img img, .details .triggers .img img, ' +
+            '.details-about-us .triggers .img, .presentations .triggers .triggers-packages .img'),
         nextBtn: $('.details .wrapper .package .info .btns .swipe-btn, ' +
                     '.calculators .package .swipe-btn img'),
         packages: {
             slider: $('.packages .package'),
-            packageImage: $('.packages .triggers .img img'),
+            packageImage: $('.packages .triggers .img img, .details-about-us .triggers .img, ' +
+                '.presentations .triggers .triggers-packages .img'),
             packageDetail: $('.details .wrapper .package'),
             packageCalc: $('.calculators .package'),
-            packages: $('.packages .package, .details .wrapper .package')
+            packages: $('.packages .package, .details .wrapper .package, .presentations .wrapper .package')
         }
     },
 

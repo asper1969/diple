@@ -2,7 +2,7 @@
 
 <div class="packages">
     <div class="wrapper">
-        <div class="package active">
+        <div class="package active static">
             <div class="container">
                 <h2 class="title">
                     <strong>мы поможем разработать и внедрить <br>
@@ -37,7 +37,7 @@
         <a href="/development" class="development"><strong>Разработка</strong> <span>сайтов</span></a>
     </div>
 </div>
-<div class="details">
+<div class="details details-about-us">
     <div class="container">
         <div class="triggers">
             <h3 class="img package active">
@@ -105,18 +105,18 @@
         </div>
     </div>
 </div>
-<div class="presentations">
+<div class="presentations presentations-about">
     <div class="container">
         <div class="triggers">
             <h2 class="title">Наши преимущества</h2>
             <div class="triggers-directions">
-                <p class="direction active">
+                <p class="direction active" data-index="1">
                     Команда профессионалов
                 </p>
-                <p class="direction">
+                <p class="direction" data-index="2">
                     Технические решения
                 </p>
-                <p class="direction">
+                <p class="direction" data-index="3">
                     Уникальный подход
                 </p>
             </div>
@@ -124,9 +124,9 @@
         </div>
     </div>
     <div class="wrapper">
-        <div class="package about active">
-            <div class="presentation active">
-                <div class="slide slide-1" data-index="1">
+        <div class="package about active static">
+            <div class="presentation active static">
+                <div class="slide slide-1">
                     <h4 class="subtitle">
                         Команда профессионалов с 10-ти летним <br>
                         опытом разработки и продвижения сайтов
@@ -183,7 +183,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="slide slide-2" data-index="2">
+                <div class="slide slide-2">
                     <h4 class="subtitle">
                         Используем лучшие технические решения, <br>
                         при разработке сайтов и ПО
@@ -200,7 +200,7 @@
                             через новейшее CMS</li>
                     </ul>
                 </div>
-                <div class="slide slide-3" data-index="3">
+                <div class="slide slide-3">
                     <h4 class="subtitle">
                         Примененим уникальный подход <br>
                         к каждому клиенту!
@@ -231,7 +231,7 @@
         </form>
     </div>
 </div>
-<div class="about-us">
+<div class="about-us shield">
     <div class="container">
         <h2 class="title"><span>Diple</span></h2>
         <div class="text">Крупнейшая компания в Казахстане <br>
